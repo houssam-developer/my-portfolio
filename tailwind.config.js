@@ -9,7 +9,11 @@ module.exports = {
 		fontFamily: {
 			'sans': ['Monserrat', ...defaultTheme.fontFamily.sans]
 		},
-		extend: {},
+		extend: {
+			colors: {
+				primary: 'var(--primary)'
+			}
+		},
 	},
 	plugins: [],
 }

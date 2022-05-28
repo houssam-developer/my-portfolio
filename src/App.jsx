@@ -5,7 +5,7 @@ import { MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork, MdOutlineCode, 
 function App() {
 
 	return (
-		<div className="h-screen max-w-[1024px] mx-auto min-h-[3000px] border-2 border-red-300">
+		<div className="h-screen  mx-auto min-h-[3000px] bg-slate-900 ">
 
 			{/* === PROFIL === */}
 
@@ -41,8 +41,11 @@ function App() {
 
 			{/* === FRONT END PROGRESS BARS === */}
 
-			<header className='flex items-center justify-between gap-4 border-2 border-orange-400 '>
-				<a href=""><MdViewInAr /></a>
+			<header className='flex items-center justify-between gap-4 min-h-[7vh]'>
+				<a className='p-4 flex items-center gap-4 text-primary' href="">
+					<MdViewInAr size={25} />
+					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
+				</a>
 				<nav className='hidden'>
 					<a href="#">Home</a>
 					<a href="#">About Me</a>
@@ -51,37 +54,51 @@ function App() {
 				</nav>
 			</header>
 
-			{/*  MdHome, MdPerson, MdWork, MdOutlineCode, MdOutlineConstruction */}
-			<nav className='flex justify-evenly fixed bottom-0 left-0 right-0 bg-slate-500 py-2 m-1 rounded-xl'>
-				<a className='flex flex-col items-center gap-2 text-xs font-sans font-bold ' href="#">
-					<div className='rounded-full bg-blue-300 p-2'>
+			<BottomNav />
+
+			{/* HERO */}
+			<section className='section-hero h-[93vh] text-white flex flex-col gap-8 justify-center  px-6 '>
+				<h2 className='font-sans font-semibold text-2xl'>
+					<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+				</h2>
+				<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+			</section>
+
+			{/* ABOUT ME */}
+
+		</div>
+	)
+
+	function BottomNav() {
+		return (
+			<nav className='md:hidden flex justify-evenly fixed bottom-0 left-0 right-0 z-10 bg-slate-800 opacity-90 py-2 m-1 rounded-xl text-white'>
+				<a className='flex flex-col items-center gap-1 text-xs font-sans font-bold text-white hover:text-blue-400' href="#">
+					<div className='rounded-full bg-gray-900 p-2 hover:bg-slate-900'>
 						<MdHome size={24} />
 					</div>
 					<span>Home</span>
 				</a>
-				<a className='flex flex-col items-center gap-2 text-xs font-sans font-bold ' href="#">
-					<div className='rounded-full bg-blue-300 p-2'>
+				<a className='flex flex-col items-center gap-1 text-xs font-sans font-bold text-white hover:text-blue-400 ' href="#">
+					<div className='rounded-full bg-gray-900 hover:bg-slate-900 p-2'>
 						<MdPerson size={24} />
 					</div>
 					<span>About Me</span>
 				</a>
-				<a className='flex flex-col items-center gap-2 text-xs font-sans font-bold ' href="#">
-					<div className='rounded-full bg-blue-300 p-2'>
-						<MdOutlineConstruction size={24} />
+				<a className='flex flex-col items-center gap-1 text-xs font-sans font-bold text-white hover:text-blue-400' href="#">
+					<div className='rounded-full bg-gray-900 hover:bg-slate-900 p-2'>
+						<MdWeb size={24} />
 					</div>
 					<span>Projects</span>
 				</a>
-				<a className='flex flex-col items-center gap-2 text-xs font-sans font-bold ' href="#">
-					<div className='rounded-full bg-blue-300 p-2'>
+				<a className='flex flex-col items-center gap-1 text-xs font-sans font-bold text-white hover:text-blue-400' href="#">
+					<div className='rounded-full bg-gray-900 hover:bg-slate-900 p-2'>
 						<MdChat size={24} />
 					</div>
 					<span>Contact Me</span>
 				</a>
 			</nav>
-
-
-		</div>
-	)
+		);
+	}
 }
 
 export default App;
