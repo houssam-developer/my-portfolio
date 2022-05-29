@@ -117,7 +117,7 @@ function App() {
 
 	function BottomNav() {
 		return (
-			<nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-10 py-2 m-1 rounded-xl text-white'>
+			<nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-10 py-2 m-1 rounded-xl text-white bg-nav'>
 				<a href='#headerApp' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400' >
 					<div className='rounded-full bg-neutral-900 p-2 hover:bg-neutral-900 '>
 						<MdHome size={24} />
