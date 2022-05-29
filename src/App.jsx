@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork, MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat } from "react-icons/md";
+import './App.scss';
 
 function App() {
 
@@ -65,7 +66,85 @@ function App() {
 			</section>
 
 			{/* ABOUT ME */}
-			<section className='h-screen p-4 flex flex-wrap gap-2 text-primary' id='sectionAboutMe' >
+
+			<section className='layout-shifter text-white'>
+				<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
+					<div className='min-w-[190px] max-w-[200px]'>
+						<div className='container-ratio-1-1'>
+							<img className='rounded-full child-ratio' src="src/images/my-photo.png" alt="picture of developer" />
+							<img className='hidden rounded-full child-ratio object-top brightness-75'
+								src="src/images/my-photo-miniature-he.jpg" alt="picture of developer"
+							/>
+						</div>
+					</div>
+					<div className='flex flex-col gap-1 max-w-xl'>
+						<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
+						<h3 className='font-sans text-cyan-300 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
+						<p className='p-6 text-md font-sans font-normal text-primary'>
+							Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
+							Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
+							Si vous cherchez un developpeur Back-end, Front-end ou FullStack, alors je saurai repondre à votre besoin.
+							<br /> N'hésitez pas à me contacter pour définir votre besoin.
+							<br /><br />
+							A très bientôt
+						</p>
+					</div>
+				</div>
+				<div>
+					{/* Reading */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+						<h3 className='font-medium text-xl'>Reading</h3>
+						<img className='rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+						<p className='text-md'>
+							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
+					</div>
+					{/* Walking */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+						<h3 className='font-medium text-xl'>Walking</h3>
+						<img className='rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+						<p className='text-md'>
+							“There is no habit you will value so much as that of walking far without fatigue.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
+					</div>
+
+					{/* Gaming */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+						<h3 className='font-medium text-xl'>Gaming</h3>
+						<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+						<p className='text-md'>
+							“Gaming brings people together.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Lisa Su.</p>
+					</div>
+
+					{/* Coding */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+						<h3 className='font-medium text-xl'>Coding</h3>
+						<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+						<p className='text-md'>
+							“Make it work, make it right, make it fast.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Kent Beck</p>
+					</div>
+				</div>
+			</section>
+
+
+			{/* <section className='flex flex-wrap gap-4'>
+				<div className='min-w-[250px] flex-grow-2 flex-col gap-4 bg-zinc-400'>
+					<div className='min-h-[300px] bg-cyan-600  w-full'>developper</div>
+					<div className='min-h-[300px] bg-purple-500  w-full'>skills</div>
+				</div>
+				<div className='flex-grow min-h-[300px] min-w-[250px] bg-orange-200'>hobbies</div>
+			</section> */}
+
+
+
+
+			<section className='h-screen p-4 flex flex-wrap gap-2 text-primary bg-neutral-800' id='sectionAboutMe' >
 				<div className='container-box flex flex-col items-center gap-4 max-w-[30%]'>
 					<div className='min-w-[190px] max-w-[200px]'>
 						<div className='container-ratio-1-1'>

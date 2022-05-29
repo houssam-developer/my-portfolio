@@ -1,0 +1,33 @@
+.layout-shifter {
+	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+
+	&> :nth-child(1) {
+		flex-grow: 1;
+		min-height: 100px;
+		min-width: 300px;
+
+		@media screen and (min-width: 768px) {
+			max-width: 350px;
+		}
+	}
+
+	&> :nth-child(2) {
+		flex-grow: 1;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		justify-items: center;
+		gap: 1em;
+
+		&>* {
+			max-width: 500px;
+		}
+	}
+}
