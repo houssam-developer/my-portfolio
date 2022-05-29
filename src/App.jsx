@@ -65,8 +65,8 @@ function App() {
 			</section>
 
 			{/* ABOUT ME */}
-			<section className='h-screen p-4 grid grid-cols-1 gap-2 sm:gap-4 md:grid-cols-2 text-primary' id='sectionAboutMe' >
-				<div className='container-box flex flex-col items-center gap-4 max-w-xl'>
+			<section className='h-screen p-4 flex flex-wrap gap-2 text-primary' id='sectionAboutMe' >
+				<div className='container-box flex flex-col items-center gap-4 max-w-[30%]'>
 					<div className='min-w-[190px] max-w-[200px]'>
 						<div className='container-ratio-1-1'>
 							<img className='rounded-full child-ratio' src="src/images/my-photo.png" alt="picture of developer" />
@@ -75,7 +75,7 @@ function App() {
 							/>
 						</div>
 					</div>
-					<div className='flex flex-col gap-1'>
+					<div className='flex flex-col gap-1 max-w-xl'>
 						<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
 						<h3 className='font-sans text-cyan-300 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
 						<p className='p-6 text-md font-sans font-normal text-primary'>
@@ -88,23 +88,49 @@ function App() {
 						</p>
 					</div>
 				</div>
-				<div className='container-box md:row-span-2'>
+				<div className='container-box max-w-[70%]'>
 					<h2 className='font-sans text-2xl font-semibold self-center mb-4'>Hobbies</h2>
-					<div className='border-b-2 border-cyan-400 flex flex-col gap-3 pb-4'>
-						<h3 className='font-medium text-xl'>Reading</h3>
-						<img className='rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
-						<p className='text-md'>
-							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
-					</div>
-					<div className='border-b-2 border-cyan-400 flex flex-col gap-3 pb-4'>
-						<h3 className='font-medium text-xl'>Walking</h3>
-						<img className='rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
-						<p className='text-md'>
-							"There is no habit you will value so much as that of walking far without fatigue."
-						</p>
-						<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
+
+					<div className='container-hobbies'>
+						{/* Reading */}
+						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
+							<h3 className='font-medium text-xl'>Reading</h3>
+							<img className='rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+							<p className='text-md'>
+								“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
+							</p>
+							<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
+						</div>
+
+						{/* Walking */}
+						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
+							<h3 className='font-medium text-xl'>Walking</h3>
+							<img className='rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+							<p className='text-md'>
+								“There is no habit you will value so much as that of walking far without fatigue.”
+							</p>
+							<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
+						</div>
+
+						{/* Gaming */}
+						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
+							<h3 className='font-medium text-xl'>Gaming</h3>
+							<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+							<p className='text-md'>
+								“Gaming brings people together.”
+							</p>
+							<p className='text-md text-[#bbb]'>— Lisa Su.</p>
+						</div>
+
+						{/* Coding */}
+						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
+							<h3 className='font-medium text-xl'>Coding</h3>
+							<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+							<p className='text-md'>
+								“Make it work, make it right, make it fast.”
+							</p>
+							<p className='text-md text-[#bbb]'>— Kent Beck</p>
+						</div>
 					</div>
 				</div>
 				<div className='container-box'>
