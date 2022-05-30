@@ -108,7 +108,8 @@ function App() {
 						<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
 						<p className='text-md font-sans font-normal text-primary flex self-start min-h-[10vh]'>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						<ul className='flex flex-col items-center gap-3 w-full'>
+						{/* <ul className='flex flex-col items-center gap-3 w-full'> */}
+						<ul className='w-full container-layout-small-grid'>
 							<li className='flex gap-2 text-sm'><DiHtml5 size={20} className='text-red-500' /> <span>HTML</span></li>
 							<li className='flex gap-2 text-sm'><DiCss3 size={20} className='text-blue-500' /> <span>CSS</span></li>
 							<li className='flex gap-2 text-sm'><DiSass size={20} className='text-pink-500' /> <span>SASS</span></li>
@@ -122,7 +123,7 @@ function App() {
 						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
 						<p className='text-md font-sans font-normal text-primary min-h-[10vh]'>I also like brigings ideas as set of steps</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						<ul className='flex flex-col items-center gap-3 w-full'>
+						<ul className='w-full container-layout-small-grid'>
 							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
 							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
 							<li className='flex gap-2 text-sm'>

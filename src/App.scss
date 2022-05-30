@@ -46,3 +46,10 @@
 .container-box {
 	@apply shadow rounded p-4 bg-neutral-800 text-primary;
 }
+
+.container-layout-small-grid {
+	padding: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 1em;
+}
