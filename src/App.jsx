@@ -103,10 +103,12 @@ function App() {
 					</div>
 				</div>
 				<div>
-					<div className='container-box flex flex-col items-center gap-4'>
-						<MdOutlinePhonelink size={50} className='text-cyan-400' />
-						<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
-						<p className='text-md font-sans font-normal text-primary flex self-start min-h-[10vh]'>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
+					<div className='container-box flex flex-col justify-between items-center gap-4'>
+						<div className='flex flex-col items-center gap-2'>
+							<MdOutlinePhonelink size={50} className='text-cyan-400' />
+							<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
+						</div>
+						<p className='text-md font-sans font-normal text-primary flex self-start flex-grow '>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						{/* <ul className='flex flex-col items-center gap-3 w-full'> */}
 						<ul className='w-full container-layout-small-grid'>
@@ -118,10 +120,12 @@ function App() {
 							<li className='flex gap-2 text-sm'><MdAspectRatio size={20} className='text-cyan-500' /> <span>Responsive Design</span></li>
 						</ul>
 					</div>
-					<div className='container-box  flex flex-col  items-center gap-4'>
-						<MdDns size={50} className='text-cyan-400' />
-						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
-						<p className='text-md font-sans font-normal text-primary min-h-[10vh]'>I also like brigings ideas as set of steps</p>
+					<div className='container-box  flex flex-col justify-between items-center gap-4'>
+						<div className='flex flex-col items-center gap-2'>
+							<MdDns size={50} className='text-cyan-400' />
+							<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
+						</div>
+						<p className='text-md font-sans font-normal text-primary flex-grow'>I also like brigings ideas as set of steps</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						<ul className='w-full container-layout-small-grid'>
 							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
@@ -132,40 +136,51 @@ function App() {
 							</li>
 						</ul>
 					</div>
-					<div className='container-box  flex flex-col  items-center gap-4'>
-						<MdBackup size={50} className='text-cyan-400' />
-						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Database</h2>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						<ul className='w-full container-layout-small-grid'>
-							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>SQL</span></li>
-							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
-							<li className='flex gap-2 text-sm'>
-								<img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />
-								<span>Kotlin</span>
-							</li>
-						</ul>
-					</div>
+
 					<div className='container-box  flex flex-col items-center gap-4'>
 						<MdBackup size={50} className='text-cyan-400' />
-						<h2>Database</h2>
-						<h3>Languages</h3>
+						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Database</h2>
+						<p className='text-md font-sans font-normal text-primary'>I know how to use Databases</p>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						<ul className='w-full container-layout-small-grid'>
 							<li className='flex gap-2 text-sm'><DiMysql size={20} className='text-blue-500' /> <span>MySQL</span></li>
 							<li className='flex gap-2 text-sm'><DiSqllite size={20} className='text-neutral-500' /> <span>SQLite</span></li>
 							<li className='flex gap-2 text-sm'><DiMongodb size={20} className='text-green-700' /> <span>MongoDB</span></li>
-
 						</ul>
 					</div>
 					<div className='container-box  flex flex-col items-center gap-4'>
 						<MdOutlineSettingsApplications size={50} className='text-cyan-400' />
-						<h2>Dev Tools</h2>
-						<h3>Languages</h3>
-						<ul>
-							<li>Windows / Linux</li>
-							<li>Bash / Powersell</li>
-							<li>VsCode / IntelliJ</li>
-							<li>Npm / Maven / Gradle</li>
-							<li>Git / Github</li>
+						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Dev Tools</h2>
+						<p className='text-md font-sans font-normal text-primary'>Tools for a better productivity</p>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Tools</h3>
+						<ul className='w-fill container-layout-small-grid'>
+							<li className='flex gap-4 text-sm'>
+								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>OS</h4>
+								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Windows </span>
+								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Linux </span>
+							</li>
+							<li className='flex gap-4 text-sm'>
+								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Shell</h4>
+								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Powershell </span>
+								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Bash </span>
+							</li>
+							<li className='flex gap-4 text-sm'>
+								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>IDE</h4>
+								<span className='flex items-center gap-1'><DiVisualstudio className=' text-blue-700' /> VSCode </span>
+								<span className='flex items-center gap-1'><DiIntellij className=' text-purple-800' /> IntelliJ </span>
+							</li>
+							<li className='flex gap-4 text-sm'>
+								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Build Tool</h4>
+								<span className='flex items-center gap-1'><DiNpm className=' text-pink-700' /> Npm </span>
+								<span className='flex items-center gap-1'><img src="src/images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" /> Gradle </span>
+							</li>
+
+							<li className='flex gap-2 text-sm'>
+								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Control System</h4>
+								<span className='flex items-center gap-1'><DiGit className=' text-orange-700' /> Git </span>
+								<span className='flex items-center gap-1'><DiGithub className=' text-purple-200' /> Github </span>
+							</li>
+
 						</ul>
 					</div>
 
