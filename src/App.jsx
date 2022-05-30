@@ -9,7 +9,7 @@ import {
 
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
-	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall
+	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb
 
 } from "react-icons/di";
 
@@ -132,15 +132,28 @@ function App() {
 							</li>
 						</ul>
 					</div>
+					<div className='container-box  flex flex-col  items-center gap-4'>
+						<MdBackup size={50} className='text-cyan-400' />
+						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Database</h2>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
+						<ul className='w-full container-layout-small-grid'>
+							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>SQL</span></li>
+							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
+							<li className='flex gap-2 text-sm'>
+								<img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />
+								<span>Kotlin</span>
+							</li>
+						</ul>
+					</div>
 					<div className='container-box  flex flex-col items-center gap-4'>
 						<MdBackup size={50} className='text-cyan-400' />
 						<h2>Database</h2>
 						<h3>Languages</h3>
-						<ul>
-							<li>SQL</li>
-							<li>MySQL</li>
-							<li>SQLite</li>
-							<li>MongoDB</li>
+						<ul className='w-full container-layout-small-grid'>
+							<li className='flex gap-2 text-sm'><DiMysql size={20} className='text-blue-500' /> <span>MySQL</span></li>
+							<li className='flex gap-2 text-sm'><DiSqllite size={20} className='text-neutral-500' /> <span>SQLite</span></li>
+							<li className='flex gap-2 text-sm'><DiMongodb size={20} className='text-green-700' /> <span>MongoDB</span></li>
+
 						</ul>
 					</div>
 					<div className='container-box  flex flex-col items-center gap-4'>
