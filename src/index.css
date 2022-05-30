@@ -60,6 +60,9 @@ body {
 
 .container-ratio-4-3 {
 	position: relative;
+
+	overflow-y: hidden;
+
 	width: 100%;
 	height: 0;
 	padding-bottom: 75%;
@@ -123,8 +126,7 @@ body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	border-bottom: 3px solid #a2a8d3;
-	border-radius: 3px;
+	@apply border-b-4 border-x-0 rounded-xl border-cyan-400;
 }
 
 .bg-nav {

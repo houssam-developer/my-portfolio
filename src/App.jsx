@@ -43,15 +43,15 @@ function App() {
 			{/* === FRONT END PROGRESS BARS === */}
 
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[7vh] bg-neutral-900'>
-				<a className='p-4 flex items-center gap-4 text-primary' href="">
+				<a className='p-4 flex items-center gap-4 text-primary' href="/">
 					<MdViewInAr size={25} />
 					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
 				</a>
 				<nav className='hidden md:flex right-0 text-primary font-sans font-medium gap-6 px-4'>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-primary' href="#headerApp">Home</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-primary' href="#sectionAboutMe">About me</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-primary' href="#sectionProjects">Projects</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-primary' href="#sectionContactMe">Contact me</a>
+					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
+					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
+					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
+					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
 				</nav>
 			</header>
 
@@ -92,18 +92,22 @@ function App() {
 				</div>
 				<div>
 					{/* Reading */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Reading</h3>
-						<img className='rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+						</div>
 						<p className='text-md'>
 							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
 						</p>
 						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
 					</div>
 					{/* Walking */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Walking</h3>
-						<img className='rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+						</div>
 						<p className='text-md'>
 							“There is no habit you will value so much as that of walking far without fatigue.”
 						</p>
@@ -111,9 +115,11 @@ function App() {
 					</div>
 
 					{/* Gaming */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Gaming</h3>
-						<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+						</div>
 						<p className='text-md'>
 							“Gaming brings people together.”
 						</p>
@@ -121,9 +127,11 @@ function App() {
 					</div>
 
 					{/* Coding */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800'>
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Coding</h3>
-						<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+						</div>
 						<p className='text-md'>
 							“Make it work, make it right, make it fast.”
 						</p>
@@ -144,78 +152,7 @@ function App() {
 
 
 
-			<section className='h-screen p-4 flex flex-wrap gap-2 text-primary bg-neutral-800' id='sectionAboutMe' >
-				<div className='container-box flex flex-col items-center gap-4 max-w-[30%]'>
-					<div className='min-w-[190px] max-w-[200px]'>
-						<div className='container-ratio-1-1'>
-							<img className='rounded-full child-ratio' src="src/images/my-photo.png" alt="picture of developer" />
-							<img className='hidden rounded-full child-ratio object-top brightness-75'
-								src="src/images/my-photo-miniature-he.jpg" alt="picture of developer"
-							/>
-						</div>
-					</div>
-					<div className='flex flex-col gap-1 max-w-xl'>
-						<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
-						<h3 className='font-sans text-cyan-300 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
-						<p className='p-6 text-md font-sans font-normal text-primary'>
-							Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
-							Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
-							Si vous cherchez un developpeur Back-end, Front-end ou FullStack, alors je saurai repondre à votre besoin.
-							<br /> N'hésitez pas à me contacter pour définir votre besoin.
-							<br /><br />
-							A très bientôt
-						</p>
-					</div>
-				</div>
-				<div className='container-box max-w-[70%]'>
-					<h2 className='font-sans text-2xl font-semibold self-center mb-4'>Hobbies</h2>
 
-					<div className='container-hobbies'>
-						{/* Reading */}
-						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
-							<h3 className='font-medium text-xl'>Reading</h3>
-							<img className='rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
-							<p className='text-md'>
-								“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
-							</p>
-							<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
-						</div>
-
-						{/* Walking */}
-						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
-							<h3 className='font-medium text-xl'>Walking</h3>
-							<img className='rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
-							<p className='text-md'>
-								“There is no habit you will value so much as that of walking far without fatigue.”
-							</p>
-							<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
-						</div>
-
-						{/* Gaming */}
-						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
-							<h3 className='font-medium text-xl'>Gaming</h3>
-							<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
-							<p className='text-md'>
-								“Gaming brings people together.”
-							</p>
-							<p className='text-md text-[#bbb]'>— Lisa Su.</p>
-						</div>
-
-						{/* Coding */}
-						<div className='border-t-2 border-cyan-400 flex flex-col gap-3 pt-4'>
-							<h3 className='font-medium text-xl'>Coding</h3>
-							<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
-							<p className='text-md'>
-								“Make it work, make it right, make it fast.”
-							</p>
-							<p className='text-md text-[#bbb]'>— Kent Beck</p>
-						</div>
-					</div>
-				</div>
-				<div className='container-box'>
-					skills
-				</div>
-			</section>
 
 		</div>
 	)
