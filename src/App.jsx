@@ -106,7 +106,7 @@ function App() {
 					<div className='container-box flex flex-col items-center gap-4'>
 						<MdOutlinePhonelink size={50} className='text-cyan-400' />
 						<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
-						<p className='text-md font-sans font-normal text-primary'>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
+						<p className='text-md font-sans font-normal text-primary flex self-start min-h-[10vh]'>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						<ul className='flex flex-col items-center gap-3 w-full'>
 							<li className='flex gap-2 text-sm'><DiHtml5 size={20} className='text-red-500' /> <span>HTML</span></li>
@@ -117,11 +117,11 @@ function App() {
 							<li className='flex gap-2 text-sm'><MdAspectRatio size={20} className='text-cyan-500' /> <span>Responsive Design</span></li>
 						</ul>
 					</div>
-					<div className='container-box  flex flex-col items-center gap-4'>
+					<div className='container-box  flex flex-col  items-center gap-4'>
 						<MdDns size={50} className='text-cyan-400' />
-						<h2>Back End</h2>
-						<p>I also like brigings ideas as set of steps</p>
-						<h3>Languages</h3>
+						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
+						<p className='text-md font-sans font-normal text-primary min-h-[10vh]'>I also like brigings ideas as set of steps</p>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						<ul className='flex flex-col items-center gap-3 w-full'>
 							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
 							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
