@@ -103,12 +103,12 @@ function App() {
 					</div>
 				</div>
 				<div>
-					<div className='container-box flex flex-col justify-between items-center gap-4'>
+					<div className='container-box flex flex-col  items-center gap-4'>
 						<div className='flex flex-col items-center gap-2'>
 							<MdOutlinePhonelink size={50} className='text-cyan-400' />
 							<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
 						</div>
-						<p className='text-md font-sans font-normal text-primary flex self-start flex-grow '>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
+						<p className='text-md font-sans font-normal text-primary flex self-start '>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						{/* <ul className='flex flex-col items-center gap-3 w-full'> */}
 						<ul className='w-full container-layout-small-grid'>
@@ -120,12 +120,12 @@ function App() {
 							<li className='flex gap-2 text-sm'><MdAspectRatio size={20} className='text-cyan-500' /> <span>Responsive Design</span></li>
 						</ul>
 					</div>
-					<div className='container-box  flex flex-col justify-between items-center gap-4'>
+					<div className='container-box  flex flex-col items-center gap-4'>
 						<div className='flex flex-col items-center gap-2'>
 							<MdDns size={50} className='text-cyan-400' />
 							<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
 						</div>
-						<p className='text-md font-sans font-normal text-primary flex-grow'>I also like brigings ideas as set of steps</p>
+						<p className='text-md font-sans font-normal text-primary '>I also like brigings ideas as set of steps</p>
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
 						<ul className='w-full container-layout-small-grid'>
 							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
@@ -187,74 +187,68 @@ function App() {
 				</div>
 			</section>
 
-			<section className='container-layout-grid-four'>
-
-
-			</section>
-
 
 			{/* Hobbies backup */}
-			<section>
-				{/* Coding */}
-				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-					<h3 className='font-medium text-xl'>Coding</h3>
-					<div className='container-ratio-4-3 max-w-full'>
-						<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+			<section className='p-4 text-primary'>
+				<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
+				<div className='container-layout-grid-four'>
+					{/* Coding */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+						<h3 className='font-medium text-xl'>Coding</h3>
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+						</div>
+						<p className='text-md'>
+							“Make it work, make it right, make it fast.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Kent Beck</p>
 					</div>
-					<p className='text-md'>
-						“Make it work, make it right, make it fast.”
-					</p>
-					<p className='text-md text-[#bbb]'>— Kent Beck</p>
-				</div>
-				{/* Reading */}
-				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-					<h3 className='font-medium text-xl'>Reading</h3>
-					<div className='container-ratio-4-3 max-w-full'>
-						<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+					{/* Reading */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+						<h3 className='font-medium text-xl'>Reading</h3>
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+						</div>
+						<p className='text-md'>
+							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
 					</div>
-					<p className='text-md'>
-						“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
-					</p>
-					<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
-				</div>
-				{/* Walking */}
-				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-					<h3 className='font-medium text-xl'>Walking</h3>
-					<div className='container-ratio-4-3 max-w-full'>
-						<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+					{/* Walking */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+						<h3 className='font-medium text-xl'>Walking</h3>
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+						</div>
+						<p className='text-md'>
+							“There is no habit you will value so much as that of walking far without fatigue.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
 					</div>
-					<p className='text-md'>
-						“There is no habit you will value so much as that of walking far without fatigue.”
-					</p>
-					<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
-				</div>
 
-				{/* Gaming */}
-				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-					<h3 className='font-medium text-xl'>Gaming</h3>
-					<div className='container-ratio-4-3 max-w-full'>
-						<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+					{/* Gaming */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+						<h3 className='font-medium text-xl'>Gaming</h3>
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+						</div>
+						<p className='text-md'>
+							“Gaming brings people together.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Lisa Su.</p>
 					</div>
-					<p className='text-md'>
-						“Gaming brings people together.”
-					</p>
-					<p className='text-md text-[#bbb]'>— Lisa Su.</p>
 				</div>
 
 			</section>
 
-			{/* <section className='flex flex-wrap gap-4'>
-				<div className='min-w-[250px] flex-grow-2 flex-col gap-4 bg-zinc-400'>
-					<div className='min-h-[300px] bg-cyan-600  w-full'>developper</div>
-					<div className='min-h-[300px] bg-purple-500  w-full'>skills</div>
+			<section className='p-4 text-primary'>
+				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
+				<div className='flex gap-4 items-center'>
+					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>All</button>
+					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>React</button>
+					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>Vanilla HTML</button>
 				</div>
-				<div className='flex-grow min-h-[300px] min-w-[250px] bg-orange-200'>hobbies</div>
-			</section> */}
-
-
-
-
-
+			</section>
 
 		</div>
 	)
