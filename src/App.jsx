@@ -1,6 +1,18 @@
 
 import { useEffect, useRef, useState } from 'react';
-import { MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork, MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat } from "react-icons/md";
+import {
+	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
+	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
+	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup,
+	MdAspectRatio
+} from "react-icons/md";
+
+import {
+	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
+	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall
+
+} from "react-icons/di";
+
 import './App.scss';
 
 function App() {
@@ -67,7 +79,7 @@ function App() {
 
 			{/* ABOUT ME */}
 
-			<section className='layout-shifter text-white'>
+			<section className='container-layout-shifter text-white'>
 				<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
 					<div className='min-w-[190px] max-w-[200px]'>
 						<div className='container-ratio-1-1'>
@@ -79,7 +91,7 @@ function App() {
 					</div>
 					<div className='flex flex-col gap-1 max-w-xl'>
 						<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
-						<h3 className='font-sans text-cyan-300 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
 						<p className='p-6 text-md font-sans font-normal text-primary'>
 							Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
 							Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
@@ -91,56 +103,116 @@ function App() {
 					</div>
 				</div>
 				<div>
-					{/* Coding */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Coding</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“Make it work, make it right, make it fast.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Kent Beck</p>
+					<div className='container-box flex flex-col items-center gap-4'>
+						<MdOutlinePhonelink size={50} className='text-cyan-400' />
+						<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
+						<p className='text-md font-sans font-normal text-primary'>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
+						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
+						<ul className='flex flex-col items-center gap-3 w-full'>
+							<li className='flex gap-2 text-sm'><DiHtml5 size={20} className='text-red-500' /> <span>HTML</span></li>
+							<li className='flex gap-2 text-sm'><DiCss3 size={20} className='text-blue-500' /> <span>CSS</span></li>
+							<li className='flex gap-2 text-sm'><DiSass size={20} className='text-pink-500' /> <span>SASS</span></li>
+							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
+							<li className='flex gap-2 text-sm'><DiReact size={20} className='text-cyan-500' /> <span>ReactJS</span></li>
+							<li className='flex gap-2 text-sm'><MdAspectRatio size={20} className='text-cyan-500' /> <span>Responsive Design</span></li>
+						</ul>
 					</div>
-					{/* Reading */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Reading</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
-						</div>
-						<p className='text-md'>
-							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
+					<div className='container-box  flex flex-col items-center gap-4'>
+						<MdDns size={50} className='text-cyan-400' />
+						<h2>Back End</h2>
+						<p>I also like brigings ideas as set of steps</p>
+						<h3>Languages</h3>
+						<ul className='flex flex-col items-center gap-3 w-full'>
+							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
+							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
+							<li className='flex gap-2 text-sm'>
+								<img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />
+								<span>Kotlin</span>
+							</li>
+						</ul>
 					</div>
-					{/* Walking */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Walking</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“There is no habit you will value so much as that of walking far without fatigue.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
+					<div className='container-box  flex flex-col items-center gap-4'>
+						<MdBackup size={50} className='text-cyan-400' />
+						<h2>Database</h2>
+						<h3>Languages</h3>
+						<ul>
+							<li>SQL</li>
+							<li>MySQL</li>
+							<li>SQLite</li>
+							<li>MongoDB</li>
+						</ul>
 					</div>
-
-					{/* Gaming */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Gaming</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“Gaming brings people together.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Lisa Su.</p>
+					<div className='container-box  flex flex-col items-center gap-4'>
+						<MdOutlineSettingsApplications size={50} className='text-cyan-400' />
+						<h2>Dev Tools</h2>
+						<h3>Languages</h3>
+						<ul>
+							<li>Windows / Linux</li>
+							<li>Bash / Powersell</li>
+							<li>VsCode / IntelliJ</li>
+							<li>Npm / Maven / Gradle</li>
+							<li>Git / Github</li>
+						</ul>
 					</div>
-
 
 				</div>
 			</section>
 
+			<section className='container-layout-grid-four'>
+
+
+			</section>
+
+
+			{/* Hobbies backup */}
+			<section>
+				{/* Coding */}
+				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+					<h3 className='font-medium text-xl'>Coding</h3>
+					<div className='container-ratio-4-3 max-w-full'>
+						<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+					</div>
+					<p className='text-md'>
+						“Make it work, make it right, make it fast.”
+					</p>
+					<p className='text-md text-[#bbb]'>— Kent Beck</p>
+				</div>
+				{/* Reading */}
+				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+					<h3 className='font-medium text-xl'>Reading</h3>
+					<div className='container-ratio-4-3 max-w-full'>
+						<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
+					</div>
+					<p className='text-md'>
+						“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
+					</p>
+					<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
+				</div>
+				{/* Walking */}
+				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+					<h3 className='font-medium text-xl'>Walking</h3>
+					<div className='container-ratio-4-3 max-w-full'>
+						<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
+					</div>
+					<p className='text-md'>
+						“There is no habit you will value so much as that of walking far without fatigue.”
+					</p>
+					<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
+				</div>
+
+				{/* Gaming */}
+				<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+					<h3 className='font-medium text-xl'>Gaming</h3>
+					<div className='container-ratio-4-3 max-w-full'>
+						<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+					</div>
+					<p className='text-md'>
+						“Gaming brings people together.”
+					</p>
+					<p className='text-md text-[#bbb]'>— Lisa Su.</p>
+				</div>
+
+			</section>
 
 			{/* <section className='flex flex-wrap gap-4'>
 				<div className='min-w-[250px] flex-grow-2 flex-col gap-4 bg-zinc-400'>
