@@ -91,6 +91,17 @@ function App() {
 					</div>
 				</div>
 				<div>
+					{/* Coding */}
+					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+						<h3 className='font-medium text-xl'>Coding</h3>
+						<div className='container-ratio-4-3 max-w-full'>
+							<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
+						</div>
+						<p className='text-md'>
+							“Make it work, make it right, make it fast.”
+						</p>
+						<p className='text-md text-[#bbb]'>— Kent Beck</p>
+					</div>
 					{/* Reading */}
 					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Reading</h3>
@@ -118,7 +129,7 @@ function App() {
 					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 						<h3 className='font-medium text-xl'>Gaming</h3>
 						<div className='container-ratio-4-3 max-w-full'>
-							<img className='rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
+							<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
 						</div>
 						<p className='text-md'>
 							“Gaming brings people together.”
@@ -126,17 +137,7 @@ function App() {
 						<p className='text-md text-[#bbb]'>— Lisa Su.</p>
 					</div>
 
-					{/* Coding */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Coding</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“Make it work, make it right, make it fast.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Kent Beck</p>
-					</div>
+
 				</div>
 			</section>
 
