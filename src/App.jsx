@@ -14,16 +14,24 @@ import {
 import './App.scss';
 import { v4 as uuidv4 } from 'uuid';
 
+const ProjectType = {
+	ALL: 'all',
+	REACT: 'react',
+	VANILLA: 'vanilla'
+};
 
 function App() {
-	const [typeProject, setTypeProject] = useState('all');
+	const [typeProject, setTypeProject] = useState('');
 	const [projects, setProjects] = useState([]);
+	const [projectsAll, setProjectsAll] = useState([]);
+	const [projectsReact, setProjectsReact] = useState([]);
+	const [projectsVanilla, setProjectsVanilla] = useState([]);
 
-	let projectsAll;
-	let projectsReact;
-	let projectsVanilla;
+	// WARN: on each render empty [] is applied to projectAll => don't do that
+	// let projectAll = [];
+
 	useEffect(() => {
-		projectsAll = [
+		const all = [
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
@@ -99,52 +107,37 @@ function App() {
 
 		];
 
-		projectsReact = projectsAll.filter(it => it.type.toLowerCase() === 'react');
-		projectsVanilla = projectsAll.filter(it => it.type.toLowerCase() !== 'react');
+		setProjectsAll(all);
+		setProjectsReact(all.filter(it => it.type.toLowerCase() === ProjectType.REACT));
+		setProjectsVanilla(all.filter(it => it.type.toLowerCase() === ProjectType.VANILLA));
+		setProjects(projectsAll);
+		setTypeProject(ProjectType.ALL);
 	}, []);
 
 	useEffect(() => {
-		if (typeProject === 'all') { setProjects(projectsAll); }
+		if (typeProject === ProjectType.ALL) { setProjects(projectsAll); }
+		if (typeProject === ProjectType.REACT) { setProjects(projectsReact); }
+		if (typeProject === ProjectType.VANILLA) { setProjects(projectsVanilla); }
 	}, [typeProject]);
 
 
+	function handleBtnAllEvent(e) {
+		e.preventDefault();
+		setTypeProject(ProjectType.ALL);
+	}
+
+	function handleBtnReactEvent(e) {
+		e.preventDefault();
+		setTypeProject(ProjectType.REACT);
+	}
+
+	function handleBtnVanillaHTMLEvent(e) {
+		e.preventDefault();
+		setTypeProject(ProjectType.VANILLA);
+	}
+
 	return (
 		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-900 ">
-
-			{/* === PROFIL === */}
-
-			{/* <section className="container-box flex flex-col sm:flex-row gap-6 sm:max-w-full sm:justify-between">
-				<div className=' min-w-[200px] max-w-[250px]'>
-					<div className='container-ratio-square'>
-						<img className=' rounded-xl child-ratio' src="src/images/my-photo.png" alt="" />
-					</div>
-				</div>
-				<div className=' flex flex-col gap-6 '>
-					<div className='flex flex-col gap-6 sm:flex-row sm:justify-between'>
-						<div>
-							<h1 className='font-sans font-semibold text-2xl text-[#4f4f4f]'>Billy Pearson</h1>
-							<span className='font-sans font-medium text-lg text-[#828282]'>Front-end developer</span>
-						</div>
-						<div>
-							<div className='flex items-center gap-2'>
-								<MdEmail fill='#828282' size={24} />
-								<span className='font-sans font-medium text-lg text-[#828282]'>billy@example.com</span>
-							</div>
-							<div className='flex items-center gap-2'>
-								<MdPhone fill='#828282' size={24} />
-								<span className='font-sans font-medium text-lg text-[#828282]'>(+603) 546 624 342</span>
-							</div>
-						</div>
-					</div>
-					<div className='font-sans font-medium text-lg text-[#828282]'>
-						Self-motivated developer, who is willing to learn and create outstanding UI applications.
-						Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.
-					</div>
-				</div>
-			</section> */}
-
-			{/* === FRONT END PROGRESS BARS === */}
-
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[7vh] bg-neutral-900'>
 				<a className='p-4 flex items-center gap-4 text-primary' href="/">
 					<MdViewInAr size={25} />
@@ -331,21 +324,10 @@ function App() {
 			<section id='#sectionProjects' className='p-4 text-primary'>
 				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 				<div className='flex gap-4 items-center py-4'>
-					<button className='btn-shadow'>All</button>
-					<button className='btn-shadow'>React</button>
-					<button className='btn-shadow'>Vanilla HTML</button>
+					<button className='btn-shadow' onClick={handleBtnAllEvent}>All</button>
+					<button className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
+					<button className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
 				</div>
-
-				{/* 
-					type: 'React',
-					tags: 'React',
-					image: 'src/images/challenges/button-challenge.png',
-					title: 'Button component',
-					description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
-					demoLink: 'https://button-component-he.netlify.app/',
-					codeLink: 'https://github.com/houssam-developer/button-component'
-			*/}
-
 
 				<ul className='container-layout-grid-four'>
 					{
