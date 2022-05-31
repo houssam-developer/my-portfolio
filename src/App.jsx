@@ -277,7 +277,7 @@ function App() {
 
 				{/* ABOUT ME */}
 				<div className='max-w-[1024px] mx-auto'>
-					<section id='#sectionAboutMe' className='container-layout-shifter text-white'>
+					<section id='sectionAboutMe' className='container-layout-shifter text-white'>
 						<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
 							<div className='min-w-[190px] max-w-[200px]'>
 								<div className='container-ratio-1-1'>
@@ -330,7 +330,7 @@ function App() {
 							{hobbies.map(it =>
 								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
 									<h3 className='font-medium text-xl'>{it.type}</h3>
-									<div className='container-ratio-4-3 max-w-full'>
+									<div className='container-ratio-4-3'>
 										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
 									</div>
 									<p className='text-md flex-grow'>
@@ -344,7 +344,7 @@ function App() {
 
 					</section>
 
-					<section id='#sectionProjects' className='p-4 text-primary'>
+					<section id='sectionProjects' className='p-4 text-primary'>
 						<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 						<div className='flex gap-4 items-center py-4'>
 							<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
