@@ -27,6 +27,10 @@ function App() {
 	const [projectsReact, setProjectsReact] = useState([]);
 	const [projectsVanilla, setProjectsVanilla] = useState([]);
 
+	const btnProjectsAll = useRef();
+	const btnProjectsReact = useRef();
+	const btnProjectsVanilla = useRef();
+
 	// WARN: on each render empty [] is applied to projectAll => don't do that
 	// let projectAll = [];
 
@@ -123,16 +127,31 @@ function App() {
 
 	function handleBtnAllEvent(e) {
 		e.preventDefault();
+
+		btnProjectsReact.current.classList.remove('btn-shadow--active');
+		btnProjectsVanilla.current.classList.remove('btn-shadow--active');
+		btnProjectsAll.current.classList.add('btn-shadow--active');
+
 		setTypeProject(ProjectType.ALL);
 	}
 
 	function handleBtnReactEvent(e) {
 		e.preventDefault();
+
+		btnProjectsAll.current.classList.remove('btn-shadow--active');
+		btnProjectsVanilla.current.classList.remove('btn-shadow--active');
+		btnProjectsReact.current.classList.add('btn-shadow--active');
+
 		setTypeProject(ProjectType.REACT);
 	}
 
 	function handleBtnVanillaHTMLEvent(e) {
 		e.preventDefault();
+
+		btnProjectsAll.current.classList.remove('btn-shadow--active');
+		btnProjectsReact.current.classList.remove('btn-shadow--active');
+		btnProjectsVanilla.current.classList.add('btn-shadow--active');
+
 		setTypeProject(ProjectType.VANILLA);
 	}
 
@@ -324,9 +343,9 @@ function App() {
 			<section id='#sectionProjects' className='p-4 text-primary'>
 				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 				<div className='flex gap-4 items-center py-4'>
-					<button className='btn-shadow' onClick={handleBtnAllEvent}>All</button>
-					<button className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
-					<button className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
+					<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
+					<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
+					<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
 				</div>
 
 				<ul className='container-layout-grid-four'>
@@ -356,29 +375,6 @@ function App() {
 						)
 					}
 				</ul>
-
-				{/* <div className='max-w-[400px] rounded p-6 bg-neutral-700 flex flex-col gap-4 border-[1px] 
-				border-neutral-500 hover:border-cyan-400'>
-					<div className=''>
-						<div className='container-ratio-4-3'>
-							<img className='child-ratio object-left rounded' src="src/images/challenges/button-challenge.png" alt="" />
-						</div>
-						<ul className='flex gap-1 py-2'>
-							<li>#React</li>
-						</ul>
-
-					</div>
-					<div className='pb-5'>
-						<h3 className='font-semibold text-xl font-sans mb-2'>Button Component</h3>
-						<p className='text-md font-normal'>One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.</p>
-					</div>
-
-					<div className='flex gap-4'>
-						<a className='btn-shadow' href="https://button-component-he.netlify.app/">DEMO</a>
-						<a className='btn-shadow' href="https://github.com/houssam-developer/button-component">CODE</a>
-					</div>
-				</div> */}
-
 			</section>
 
 		</div>
