@@ -278,7 +278,7 @@ function App() {
 				{/* ABOUT ME */}
 				<div className='max-w-[1440px] mx-auto'>
 					<section id='sectionAboutMe' className='container-layout-shifter-one text-white'>
-						<div className='bg-neutral-800 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full'>
+						<div className='bg-neutral-800 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full  border-[1px] border-neutral-500'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
@@ -306,7 +306,7 @@ function App() {
 						{/* ul is tracked as grid in layout-shifter */}
 						<ul className='container-layout-grid-skills'>
 							{skills.map(it =>
-								<li className='container-box flex flex-col items-center gap-8 pt-8'>
+								<li className='container-box flex flex-col items-center gap-8 pt-8 border-[1px] border-neutral-500'>
 									<div className='flex flex-col items-center gap-4'>
 										{it.typeIcon}
 										<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
@@ -331,7 +331,7 @@ function App() {
 						<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
 						<ul className='container-layout-grid-four'>
 							{hobbies.map(it =>
-								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow  border-[1px] border-neutral-500'>
 									<h3 className='font-medium text-xl'>{it.type}</h3>
 									<div className='container-ratio-4-3'>
 										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
@@ -359,7 +359,7 @@ function App() {
 							{
 								projects.map(it =>
 									<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
-							border-transparent  hover:border-cyan-400 transition-[border]'>
+ border-neutral-500  hover:border-cyan-400 transition-[border]'>
 										<div>
 											<div className='container-ratio-4-3'>
 												<img className='child-ratio object-left rounded'
