@@ -276,10 +276,10 @@ function App() {
 				</section>
 
 				{/* ABOUT ME */}
-				<div className='max-w-[1024px] mx-auto'>
-					<section id='sectionAboutMe' className='container-layout-shifter text-white'>
-						<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
-							<div className='min-w-[190px] max-w-[200px]'>
+				<div className='max-w-[1440px] mx-auto'>
+					<section id='sectionAboutMe' className='container-layout-shifter-one text-white'>
+						<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded w-full'>
+							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
 									{/* <img className='hidden rounded-full child-ratio object-top brightness-75'
@@ -299,17 +299,20 @@ function App() {
 									A très bientôt
 								</p>
 							</div>
+							<div>
+
+							</div>
 						</div>
 						{/* ul is tracked as grid in layout-shifter */}
 						<ul className='container-layout-grid-skills'>
 							{skills.map(it =>
-								<li className='container-box flex flex-col items-center gap-8'>
+								<li className='container-box flex flex-col items-center gap-8 pt-8'>
 									<div className='flex flex-col items-center gap-4'>
 										{it.typeIcon}
 										<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
 									</div>
 
-									<ul className='w-full flex flex-wrap justify-evenly gap-3'>
+									<ul className='w-full flex flex-wrap justify-center gap-4'>
 										{it.languages.map(itArg =>
 											<li
 												className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
@@ -352,7 +355,7 @@ function App() {
 							<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
 						</div>
 
-						<ul className='container-layout-grid-four'>
+						<ul className='container-layout-grid-four-projects'>
 							{
 								projects.map(it =>
 									<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
@@ -384,6 +387,25 @@ function App() {
 
 			</main>
 
+			<footer className=' bg-[#111] '>
+				<div className='flex items-center justify-between p-4 max-w-[1024px] mx-auto min-h-[40vh] border-2 border-orange-300'>
+					<nav className='flex flex-col right-0 text-primary font-sans font-medium gap-6 px-4'>
+						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
+						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
+						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
+						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
+					</nav>
+					<div className='text-primary'>
+						<h2>Social network</h2>
+						<div>
+							<img src="" alt="" />
+							<img src="" alt="" />
+							<img src="" alt="" />
+						</div>
+					</div>
+					<p className="text-primary text-center p-4 font-medium">created by <span className='font-bold'>houssam-developer</span> - devChallenges.io</p>
+				</div>
+			</footer>
 		</div>
 	)
 
