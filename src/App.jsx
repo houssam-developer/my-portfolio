@@ -6,16 +6,90 @@ import {
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup,
 	MdAspectRatio
 } from "react-icons/md";
-
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
 	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb
 
 } from "react-icons/di";
-
 import './App.scss';
 
 function App() {
+	const [projects, setProjects] = useState([
+		{
+			type: 'React',
+			tags: 'React',
+			image: '',
+			title: 'Button component',
+			description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
+			demoLink: 'https://button-component-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/button-component'
+		},
+		{
+			type: 'React',
+			tags: 'React',
+			image: '',
+			title: 'Input component',
+			description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
+			demoLink: 'https://input-component-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/input-component'
+		},
+		{
+			type: 'React',
+			tags: 'React',
+			image: '',
+			title: 'WindBnB Challenge',
+			description: 'Airbnb has a great UI, it so modern and clean.',
+			demoLink: 'https://winbnb-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/windbnb'
+		},
+		{
+			type: 'React',
+			tags: 'React',
+			image: '',
+			title: 'Todo app',
+			description: 'Todo app is one of the common projects when it comes to practicing coding',
+			demoLink: 'https://todo-app-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/todo-app'
+		},
+		{
+			type: 'vanilla',
+			tags: ['HTML', 'CSS', 'RESPONSIVE'],
+			image: '',
+			title: 'Edie Homepage',
+			description: 'Homepage is a popular task that a developer has to do. In this challenge, I had to work with a given design and fullfil the user stories.',
+			demoLink: 'https://edie-homepage-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/edit-homepage'
+		},
+		{
+			type: 'vanilla',
+			tags: ['HTML', 'CSS', 'RESPONSIVE'],
+			image: '',
+			title: 'Checkout Page',
+			description: 'Checkout page use a minimal design and contains a form with differents inputs. In this challenge, I had to work with a given design and fullfil the user stories.',
+			demoLink: 'https://my-checkout-page-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/my-checkout-page'
+		},
+		{
+			type: 'vanilla',
+			tags: ['HTML', 'CSS', 'RESPONSIVE'],
+			image: '',
+			title: 'My Gallery Page',
+			description: 'Inspired by Instagram. In this challenge, I had to work with a similar design to instagram profile page.',
+			demoLink: 'https://my-gallery-page-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/my-gallery-page'
+		},
+		{
+			type: 'vanilla',
+			tags: ['HTML', 'CSS', 'RESPONSIVE'],
+			image: '',
+			title: 'Recipe Page',
+			description: 'Everyone loves food, especially cheesecake. In this project, I had to work with a given recipe and fullfil the user stories.',
+			demoLink: 'https://recipe-page-he.netlify.app/',
+			codeLink: 'https://github.com/houssam-developer/recipe-page'
+		},
+
+	]);
+
 
 	return (
 		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-900 ">
@@ -155,28 +229,24 @@ function App() {
 						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Tools</h3>
 						<ul className='w-fill container-layout-small-grid'>
 							<li className='flex gap-4 text-sm'>
-								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>OS</h4>
+
 								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Windows </span>
 								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Linux </span>
 							</li>
 							<li className='flex gap-4 text-sm'>
-								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Shell</h4>
 								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Powershell </span>
 								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Bash </span>
 							</li>
 							<li className='flex gap-4 text-sm'>
-								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>IDE</h4>
 								<span className='flex items-center gap-1'><DiVisualstudio className=' text-blue-700' /> VSCode </span>
 								<span className='flex items-center gap-1'><DiIntellij className=' text-purple-800' /> IntelliJ </span>
 							</li>
 							<li className='flex gap-4 text-sm'>
-								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Build Tool</h4>
 								<span className='flex items-center gap-1'><DiNpm className=' text-pink-700' /> Npm </span>
 								<span className='flex items-center gap-1'><img src="src/images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" /> Gradle </span>
 							</li>
 
 							<li className='flex gap-2 text-sm'>
-								<h4 className='font-sans text-cyan-400 font-medium text-sm mr-auto'>Control System</h4>
 								<span className='flex items-center gap-1'><DiGit className=' text-orange-700' /> Git </span>
 								<span className='flex items-center gap-1'><DiGithub className=' text-purple-200' /> Github </span>
 							</li>
@@ -244,10 +314,13 @@ function App() {
 			<section className='p-4 text-primary'>
 				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 				<div className='flex gap-4 items-center'>
-					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>All</button>
-					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>React</button>
-					<button className='px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold ftext-sm text-white hover:border-cyan-600'>Vanilla HTML</button>
+					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>All</button>
+					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>React</button>
+					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>Vanilla HTML</button>
 				</div>
+
+
+
 			</section>
 
 		</div>
