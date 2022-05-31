@@ -17,27 +17,24 @@
 
 	&> :nth-child(2) {
 		flex: 1 1 300px;
-
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 1em;
-
-		/* with flex
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			gap: 1em;
-			&>* {
-				flex: 1 1 300px;
-				max-width: 600px;
-			}
-		*/
 	}
 }
 
 .container-layout-grid-four {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1em;
+}
+
+.container-layout-grid-skills {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 1em;
+}
+
+.container-layout-grid-skills-small {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	gap: 1em;
 }
 

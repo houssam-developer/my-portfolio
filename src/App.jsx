@@ -60,16 +60,16 @@ function App() {
 			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiHtml5 size={20} className='text-red-500' />, tag: 'HTML' },
-				{ icon: <DiCss3 size={20} className='text-blue-500' />, tag: 'CSS' },
-				{ icon: <DiSass size={20} className='text-pink-500' />, tag: 'SASS' },
-				{ icon: <DiReact size={20} className='text-cyan-500' />, tag: 'ReactJS' },
-				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
+				{ icon: <DiHtml5 size={20} className='text-red-500  min-w-[18px]' />, tag: 'HTML' },
+				{ icon: <DiCss3 size={20} className='text-blue-500  min-w-[18px]' />, tag: 'CSS' },
+				{ icon: <DiSass size={20} className='text-pink-500  min-w-[18px]' />, tag: 'SASS' },
+				{ icon: <DiReact size={20} className='text-cyan-500  min-w-[18px]' />, tag: 'ReactJS' },
+				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
 				{
 					icon: <img src="images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
 					tag: 'Typescript'
 				},
-				{ icon: <MdAspectRatio size={20} className='text-cyan-500' />, tag: 'Responsive Design' }
+				{ icon: <MdAspectRatio size={20} className='text-cyan-500 min-w-[18px]' />, tag: 'Responsive Design' }
 			],
 		},
 		{
@@ -78,8 +78,8 @@ function App() {
 			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
-				{ icon: <DiNodejsSmall size={20} className='text-green-500' />, tag: 'NodeJS' },
+				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
+				{ icon: <DiNodejsSmall size={20} className='text-green-500 min-w-[18px]' />, tag: 'NodeJS' },
 				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' }
 			]
 		},
@@ -89,9 +89,9 @@ function App() {
 			description: 'I know how to use Databases',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiMysql size={20} className='text-blue-500' />, tag: 'MySQL' },
-				{ icon: <DiSqllite size={20} className='text-neutral-500' />, tag: 'SQLite' },
-				{ icon: <DiMongodb size={20} className='text-green-700' />, tag: 'MongoDB' }
+				{ icon: <DiMysql size={20} className='text-blue-500 min-w-[18px]' />, tag: 'MySQL' },
+				{ icon: <DiSqllite size={20} className='text-neutral-500 min-w-[18px]' />, tag: 'SQLite' },
+				{ icon: <DiMongodb size={20} className='text-green-700 min-w-[18px]' />, tag: 'MongoDB' }
 			]
 		},
 		{
@@ -100,13 +100,13 @@ function App() {
 			description: 'Tools for a better productivity',
 			languagesTitle: 'Tools',
 			languages: [
-				{ icon: <DiWindows className=' text-blue-500' />, tag: 'Windows' },
-				{ icon: <DiLinux className=' text-orange-400' />, tag: 'Linux' },
-				{ icon: <DiWindows className=' text-blue-500' />, tag: 'Powershell' },
-				{ icon: <DiLinux className=' text-orange-400' />, tag: 'Bash' },
-				{ icon: <DiVisualstudio className=' text-blue-700' />, tag: 'VSCode' },
-				{ icon: <DiIntellij className=' text-purple-800' />, tag: 'IntelliJ' },
-				{ icon: <DiNpm className=' text-pink-700' />, tag: 'Npm' },
+				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
+				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Linux' },
+				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
+				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Bash' },
+				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
+				{ icon: <DiIntellij className=' text-purple-800 min-w-[18px]' />, tag: 'IntelliJ' },
+				{ icon: <DiNpm className=' text-pink-700 min-w-[18px]' />, tag: 'Npm' },
 				{
 					icon: <img src="images/vite-logo.svg" width={'18px'} height={'18px'} alt="logo of vite build tool" />,
 					tag: 'Vite'
@@ -115,8 +115,8 @@ function App() {
 					icon: <img src="images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" />,
 					tag: 'Gradle'
 				},
-				{ icon: <DiGit className=' text-orange-700' />, tag: 'Git' },
-				{ icon: <DiGithub className=' text-purple-200' />, tag: 'Github' }
+				{ icon: <DiGit className=' text-orange-700 min-w-[20px]' />, tag: 'Git' },
+				{ icon: <DiGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' }
 			]
 		}
 	]);
@@ -299,18 +299,19 @@ function App() {
 						</p>
 					</div>
 				</div>
-				<ul className='container-layout-grid-four'>
+				{/* ul is tracked as grid in layout-shifter */}
+				<ul className='container-layout-grid-skills'>
 					{skills.map(it =>
-						<li className='container-box flex flex-col items-center gap-5'>
-							<div className='flex flex-col items-center gap-3'>
+						<li className='container-box flex flex-col items-center gap-8'>
+							<div className='flex flex-col items-center gap-4'>
 								{it.typeIcon}
 								<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
 							</div>
 
-							<ul className='w-full container-layout-small-grid'>
+							<ul className='w-full flex flex-wrap justify-evenly gap-3'>
 								{it.languages.map(itArg =>
 									<li
-										className='flex items-center gap-1 text-[12px] font-sans font-medium p-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
+										className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
 								}
 							</ul>
 
