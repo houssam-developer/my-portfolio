@@ -26,6 +26,32 @@ function App() {
 	const [projectsAll, setProjectsAll] = useState([]);
 	const [projectsReact, setProjectsReact] = useState([]);
 	const [projectsVanilla, setProjectsVanilla] = useState([]);
+	const [hobbies, setHobbies] = useState([
+		{
+			type: 'Coding',
+			image: 'src/images/coding.jpg',
+			quote: 'Make it work, make it right, make it fast.',
+			quoteAuthor: 'Kent Beck'
+		},
+		{
+			type: 'Reading',
+			image: 'src/images/reading.jpg',
+			quote: 'The more that you read, the more things you will know. The more that you learn, the more places you’ll go.',
+			quoteAuthor: 'Dr. Seuss'
+		},
+		{
+			type: 'Walking',
+			image: 'src/images/walking.jpg',
+			quote: 'There is no habit you will value so much as that of walking far without fatigue.',
+			quoteAuthor: 'Thomas Jefferson'
+		},
+		{
+			type: 'Gaming',
+			image: 'src/images/gaming.jpg',
+			quote: 'Gaming brings people together.',
+			quoteAuthor: 'Lisa Su'
+		},
+	]);
 
 	const btnProjectsAll = useRef();
 	const btnProjectsReact = useRef();
@@ -290,53 +316,21 @@ function App() {
 			{/* Hobbies backup */}
 			<section className='p-4 text-primary'>
 				<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
-				<div className='container-layout-grid-four'>
-					{/* Coding */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Coding</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/coding.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“Make it work, make it right, make it fast.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Kent Beck</p>
-					</div>
-					{/* Reading */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Reading</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/reading.jpg" alt="picture of book and cup of coffe" />
-						</div>
-						<p className='text-md'>
-							“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Dr. Seuss</p>
-					</div>
-					{/* Walking */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Walking</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/walking.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“There is no habit you will value so much as that of walking far without fatigue.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Thomas Jefferson</p>
-					</div>
-
-					{/* Gaming */}
-					<div className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-						<h3 className='font-medium text-xl'>Gaming</h3>
-						<div className='container-ratio-4-3 max-w-full'>
-							<img className='child-ratio rounded-xl' src="src/images/gaming.jpg" alt="picture of walking man" />
-						</div>
-						<p className='text-md'>
-							“Gaming brings people together.”
-						</p>
-						<p className='text-md text-[#bbb]'>— Lisa Su.</p>
-					</div>
-				</div>
+				<ul className='container-layout-grid-four'>
+					{hobbies.map(it =>
+						<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+							<h3 className='font-medium text-xl'>{it.type}</h3>
+							<div className='container-ratio-4-3 max-w-full'>
+								<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
+							</div>
+							<p className='text-md flex-grow'>
+								“{it.quote}”
+							</p>
+							<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
+						</li>
+					)
+					}
+				</ul>
 
 			</section>
 
@@ -351,7 +345,7 @@ function App() {
 				<ul className='container-layout-grid-four'>
 					{
 						projects.map(it =>
-							<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col gap-4 border-[1px]
+							<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
 							border-transparent  hover:border-cyan-400 transition-[border]'>
 								<div>
 									<div className='container-ratio-4-3'>
@@ -362,7 +356,7 @@ function App() {
 										{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
 									</ul>
 								</div>
-								<div className='pb-5'>
+								<div className='pb-5 flex flex-col justify-start flex-grow'>
 									<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
 									<p className='text-md'>{it.description}</p>
 								</div>
