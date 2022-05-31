@@ -12,83 +12,100 @@ import {
 
 } from "react-icons/di";
 import './App.scss';
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
-	const [projects, setProjects] = useState([
-		{
-			type: 'React',
-			tags: 'React',
-			image: '',
-			title: 'Button component',
-			description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
-			demoLink: 'https://button-component-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/button-component'
-		},
-		{
-			type: 'React',
-			tags: 'React',
-			image: '',
-			title: 'Input component',
-			description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
-			demoLink: 'https://input-component-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/input-component'
-		},
-		{
-			type: 'React',
-			tags: 'React',
-			image: '',
-			title: 'WindBnB Challenge',
-			description: 'Airbnb has a great UI, it so modern and clean.',
-			demoLink: 'https://winbnb-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/windbnb'
-		},
-		{
-			type: 'React',
-			tags: 'React',
-			image: '',
-			title: 'Todo app',
-			description: 'Todo app is one of the common projects when it comes to practicing coding',
-			demoLink: 'https://todo-app-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/todo-app'
-		},
-		{
-			type: 'vanilla',
-			tags: ['HTML', 'CSS', 'RESPONSIVE'],
-			image: '',
-			title: 'Edie Homepage',
-			description: 'Homepage is a popular task that a developer has to do. In this challenge, I had to work with a given design and fullfil the user stories.',
-			demoLink: 'https://edie-homepage-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/edit-homepage'
-		},
-		{
-			type: 'vanilla',
-			tags: ['HTML', 'CSS', 'RESPONSIVE'],
-			image: '',
-			title: 'Checkout Page',
-			description: 'Checkout page use a minimal design and contains a form with differents inputs. In this challenge, I had to work with a given design and fullfil the user stories.',
-			demoLink: 'https://my-checkout-page-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/my-checkout-page'
-		},
-		{
-			type: 'vanilla',
-			tags: ['HTML', 'CSS', 'RESPONSIVE'],
-			image: '',
-			title: 'My Gallery Page',
-			description: 'Inspired by Instagram. In this challenge, I had to work with a similar design to instagram profile page.',
-			demoLink: 'https://my-gallery-page-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/my-gallery-page'
-		},
-		{
-			type: 'vanilla',
-			tags: ['HTML', 'CSS', 'RESPONSIVE'],
-			image: '',
-			title: 'Recipe Page',
-			description: 'Everyone loves food, especially cheesecake. In this project, I had to work with a given recipe and fullfil the user stories.',
-			demoLink: 'https://recipe-page-he.netlify.app/',
-			codeLink: 'https://github.com/houssam-developer/recipe-page'
-		},
+	const [typeProject, setTypeProject] = useState('all');
+	const [projects, setProjects] = useState([]);
 
-	]);
+	let projectsAll;
+	let projectsReact;
+	let projectsVanilla;
+	useEffect(() => {
+		projectsAll = [
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'src/images/challenges/button-challenge.png',
+				title: 'Button component',
+				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
+				demoLink: 'https://button-component-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/button-component'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'src/images/challenges/input-challenge.png',
+				title: 'Input component',
+				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
+				demoLink: 'https://input-component-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/input-component'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'src/images/challenges/windbnb-challenge.png',
+				title: 'WindBnB Challenge',
+				description: 'Airbnb has a great UI, it so modern and clean.',
+				demoLink: 'https://winbnb-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/windbnb'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'src/images/challenges/todo-challenge.png',
+				title: 'Todo app',
+				description: 'Todo app is one of the common projects when it comes to practicing coding',
+				demoLink: 'https://todo-app-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/todo-app'
+			},
+			{
+				type: 'vanilla',
+				tags: ['HTML', 'CSS', 'RESPONSIVE'],
+				image: 'src/images/challenges/edie-homepage.png',
+				title: 'Edie Homepage',
+				description: 'Homepage is a popular task that a developer has to do. In this challenge, I had to work with a given design and fullfil the user stories.',
+				demoLink: 'https://edie-homepage-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/edit-homepage'
+			},
+			{
+				type: 'vanilla',
+				tags: ['HTML', 'CSS', 'RESPONSIVE'],
+				image: 'src/images/challenges/checkout-page.png',
+				title: 'Checkout Page',
+				description: 'Checkout page use a minimal design and contains a form with differents inputs. In this challenge, I had to work with a given design and fullfil the user stories.',
+				demoLink: 'https://my-checkout-page-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/my-checkout-page'
+			},
+			{
+				type: 'vanilla',
+				tags: ['HTML', 'CSS', 'RESPONSIVE'],
+				image: 'src/images/challenges/my-gallery.png',
+				title: 'My Gallery Page',
+				description: 'Inspired by Instagram. In this challenge, I had to work with a similar design to instagram profile page.',
+				demoLink: 'https://my-gallery-page-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/my-gallery-page'
+			},
+			{
+				type: 'vanilla',
+				tags: ['HTML', 'CSS', 'RESPONSIVE'],
+				image: 'src/images/challenges/recipe-page.png',
+				title: 'Recipe Page',
+				description: 'Everyone loves food, especially cheesecake. In this project, I had to work with a given recipe and fullfil the user stories.',
+				demoLink: 'https://recipe-page-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/recipe-page'
+			},
+
+		];
+
+		projectsReact = projectsAll.filter(it => it.type.toLowerCase() === 'react');
+		projectsVanilla = projectsAll.filter(it => it.type.toLowerCase() !== 'react');
+	}, []);
+
+	useEffect(() => {
+		if (typeProject === 'all') { setProjects(projectsAll); }
+	}, [typeProject]);
 
 
 	return (
@@ -153,7 +170,7 @@ function App() {
 
 			{/* ABOUT ME */}
 
-			<section className='container-layout-shifter text-white'>
+			<section id='#sectionAboutMe' className='container-layout-shifter text-white'>
 				<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
 					<div className='min-w-[190px] max-w-[200px]'>
 						<div className='container-ratio-1-1'>
@@ -311,15 +328,74 @@ function App() {
 
 			</section>
 
-			<section className='p-4 text-primary'>
+			<section id='#sectionProjects' className='p-4 text-primary'>
 				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
-				<div className='flex gap-4 items-center'>
-					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>All</button>
-					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>React</button>
-					<button className='transition-shadow px-4 py-2 bg-transparent border-[1px] border-neutral-500 rounded font-sans font-semibold text-sm text-white hover:border-cyan-600 hover:shadow-[0_0_10px_#22d3ee]'>Vanilla HTML</button>
+				<div className='flex gap-4 items-center py-4'>
+					<button className='btn-shadow'>All</button>
+					<button className='btn-shadow'>React</button>
+					<button className='btn-shadow'>Vanilla HTML</button>
 				</div>
 
+				{/* 
+					type: 'React',
+					tags: 'React',
+					image: 'src/images/challenges/button-challenge.png',
+					title: 'Button component',
+					description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
+					demoLink: 'https://button-component-he.netlify.app/',
+					codeLink: 'https://github.com/houssam-developer/button-component'
+			*/}
 
+
+				<ul className='container-layout-grid-four'>
+					{
+						projects.map(it =>
+							<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col gap-4 border-[1px]
+							border-transparent  hover:border-cyan-400 transition-[border]'>
+								<div>
+									<div className='container-ratio-4-3'>
+										<img className='child-ratio object-left rounded'
+											src={it.image} alt={`picture of project ${it.title}`} />
+									</div>
+									<ul className='flex gap-2 py-2 text-cyan-400'>
+										{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
+									</ul>
+								</div>
+								<div className='pb-5'>
+									<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
+									<p className='text-md'>{it.description}</p>
+								</div>
+
+								<div className='flex gap-4'>
+									<a className='btn-shadow' href={it.demoLink}>DEMO</a>
+									<a className='btn-shadow' href={it.codeLink}>CODE</a>
+								</div>
+							</li>
+						)
+					}
+				</ul>
+
+				{/* <div className='max-w-[400px] rounded p-6 bg-neutral-700 flex flex-col gap-4 border-[1px] 
+				border-neutral-500 hover:border-cyan-400'>
+					<div className=''>
+						<div className='container-ratio-4-3'>
+							<img className='child-ratio object-left rounded' src="src/images/challenges/button-challenge.png" alt="" />
+						</div>
+						<ul className='flex gap-1 py-2'>
+							<li>#React</li>
+						</ul>
+
+					</div>
+					<div className='pb-5'>
+						<h3 className='font-semibold text-xl font-sans mb-2'>Button Component</h3>
+						<p className='text-md font-normal'>One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.</p>
+					</div>
+
+					<div className='flex gap-4'>
+						<a className='btn-shadow' href="https://button-component-he.netlify.app/">DEMO</a>
+						<a className='btn-shadow' href="https://github.com/houssam-developer/button-component">CODE</a>
+					</div>
+				</div> */}
 
 			</section>
 

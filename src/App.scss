@@ -53,4 +53,10 @@
 	gap: 1em;
 }
 
-.btn-shadow {}
+.btn-shadow {
+	@apply px-4 py-2 border-[1px] rounded font-sans font-semibold text-sm text-white bg-transparent border-neutral-500 transition-shadow;
+
+	&:hover {
+		@apply border-cyan-600 shadow-[0_0_10px_#22d3ee];
+	}
+}
