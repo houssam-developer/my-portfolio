@@ -53,6 +53,74 @@ function App() {
 		},
 	]);
 
+	const [skills, setSkills] = useState([
+		{
+			type: 'Front End',
+			typeIcon: <MdOutlinePhonelink size={50} className='text-cyan-400' />,
+			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
+			languagesTitle: 'Languages',
+			languages: [
+				{ icon: <DiHtml5 size={20} className='text-red-500' />, tag: 'HTML' },
+				{ icon: <DiCss3 size={20} className='text-blue-500' />, tag: 'CSS' },
+				{ icon: <DiSass size={20} className='text-pink-500' />, tag: 'SASS' },
+				{ icon: <DiReact size={20} className='text-cyan-500' />, tag: 'ReactJS' },
+				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
+				{
+					icon: <img src="src/images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
+					tag: 'Typescript'
+				},
+				{ icon: <MdAspectRatio size={20} className='text-cyan-500' />, tag: 'Responsive Design' }
+			],
+		},
+		{
+			type: 'Back End',
+			typeIcon: <MdDns size={50} className='text-cyan-400' />,
+			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
+			languagesTitle: 'Languages',
+			languages: [
+				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
+				{ icon: <DiNodejsSmall size={20} className='text-green-500' />, tag: 'NodeJS' },
+				{ icon: <img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' }
+			]
+		},
+		{
+			type: 'Database',
+			typeIcon: <MdBackup size={50} className='text-cyan-400' />,
+			description: 'I know how to use Databases',
+			languagesTitle: 'Languages',
+			languages: [
+				{ icon: <DiMysql size={20} className='text-blue-500' />, tag: 'MySQL' },
+				{ icon: <DiSqllite size={20} className='text-neutral-500' />, tag: 'SQLite' },
+				{ icon: <DiMongodb size={20} className='text-green-700' />, tag: 'MongoDB' }
+			]
+		},
+		{
+			type: 'Dev Tools',
+			typeIcon: <MdOutlineSettingsApplications size={50} className='text-cyan-400' />,
+			description: 'Tools for a better productivity',
+			languagesTitle: 'Tools',
+			languages: [
+				{ icon: <DiWindows className=' text-blue-500' />, tag: 'Windows' },
+				{ icon: <DiLinux className=' text-orange-400' />, tag: 'Linux' },
+				{ icon: <DiWindows className=' text-blue-500' />, tag: 'Powershell' },
+				{ icon: <DiLinux className=' text-orange-400' />, tag: 'Bash' },
+				{ icon: <DiVisualstudio className=' text-blue-700' />, tag: 'VSCode' },
+				{ icon: <DiIntellij className=' text-purple-800' />, tag: 'IntelliJ' },
+				{ icon: <DiNpm className=' text-pink-700' />, tag: 'Npm' },
+				{
+					icon: <img src="src/images/vite-logo.svg" width={'18px'} height={'18px'} alt="logo of vite build tool" />,
+					tag: 'Vite'
+				},
+				{
+					icon: <img src="src/images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" />,
+					tag: 'Gradle'
+				},
+				{ icon: <DiGit className=' text-orange-700' />, tag: 'Git' },
+				{ icon: <DiGithub className=' text-purple-200' />, tag: 'Github' }
+			]
+		}
+	]);
+
 	const btnProjectsAll = useRef();
 	const btnProjectsReact = useRef();
 	const btnProjectsVanilla = useRef();
@@ -231,85 +299,25 @@ function App() {
 						</p>
 					</div>
 				</div>
-				<div>
-					<div className='container-box flex flex-col  items-center gap-4'>
-						<div className='flex flex-col items-center gap-2'>
-							<MdOutlinePhonelink size={50} className='text-cyan-400' />
-							<h2 className='font-sans text-xl font-semibold text-cyan-400'>Front End</h2>
-						</div>
-						<p className='text-md font-sans font-normal text-primary flex self-start '>I like to code things from scratch, and enjoy bringing ideas in the browser</p>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						{/* <ul className='flex flex-col items-center gap-3 w-full'> */}
-						<ul className='w-full container-layout-small-grid'>
-							<li className='flex gap-2 text-sm'><DiHtml5 size={20} className='text-red-500' /> <span>HTML</span></li>
-							<li className='flex gap-2 text-sm'><DiCss3 size={20} className='text-blue-500' /> <span>CSS</span></li>
-							<li className='flex gap-2 text-sm'><DiSass size={20} className='text-pink-500' /> <span>SASS</span></li>
-							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
-							<li className='flex gap-2 text-sm'><DiReact size={20} className='text-cyan-500' /> <span>ReactJS</span></li>
-							<li className='flex gap-2 text-sm'><MdAspectRatio size={20} className='text-cyan-500' /> <span>Responsive Design</span></li>
-						</ul>
-					</div>
-					<div className='container-box  flex flex-col items-center gap-4'>
-						<div className='flex flex-col items-center gap-2'>
-							<MdDns size={50} className='text-cyan-400' />
-							<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Back End</h2>
-						</div>
-						<p className='text-md font-sans font-normal text-primary '>I also like brigings ideas as set of steps</p>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						<ul className='w-full container-layout-small-grid'>
-							<li className='flex gap-2 text-sm'><DiJsBadge size={20} className='text-yellow-500' /> <span>Javascript</span></li>
-							<li className='flex gap-2 text-sm'><DiNodejsSmall size={20} className='text-green-500' /> <span>NodeJS</span></li>
-							<li className='flex gap-2 text-sm'>
-								<img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />
-								<span>Kotlin</span>
-							</li>
-						</ul>
-					</div>
+				<ul className='container-layout-grid-four'>
+					{skills.map(it =>
+						<li className='container-box flex flex-col items-center gap-5'>
+							<div className='flex flex-col items-center gap-3'>
+								{it.typeIcon}
+								<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
+							</div>
 
-					<div className='container-box  flex flex-col items-center gap-4'>
-						<MdBackup size={50} className='text-cyan-400' />
-						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Database</h2>
-						<p className='text-md font-sans font-normal text-primary'>I know how to use Databases</p>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Languages</h3>
-						<ul className='w-full container-layout-small-grid'>
-							<li className='flex gap-2 text-sm'><DiMysql size={20} className='text-blue-500' /> <span>MySQL</span></li>
-							<li className='flex gap-2 text-sm'><DiSqllite size={20} className='text-neutral-500' /> <span>SQLite</span></li>
-							<li className='flex gap-2 text-sm'><DiMongodb size={20} className='text-green-700' /> <span>MongoDB</span></li>
-						</ul>
-					</div>
-					<div className='container-box  flex flex-col items-center gap-4'>
-						<MdOutlineSettingsApplications size={50} className='text-cyan-400' />
-						<h2 className='font-sans text-xl font-semibold text-cyan-400 '>Dev Tools</h2>
-						<p className='text-md font-sans font-normal text-primary'>Tools for a better productivity</p>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm'>Tools</h3>
-						<ul className='w-fill container-layout-small-grid'>
-							<li className='flex gap-4 text-sm'>
+							<ul className='w-full container-layout-small-grid'>
+								{it.languages.map(itArg =>
+									<li
+										className='flex items-center gap-1 text-[12px] font-sans font-medium p-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
+								}
+							</ul>
 
-								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Windows </span>
-								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Linux </span>
-							</li>
-							<li className='flex gap-4 text-sm'>
-								<span className='flex items-center gap-1'><DiWindows className=' text-blue-500' /> Powershell </span>
-								<span className='flex items-center gap-1'><DiLinux className=' text-orange-400' /> Bash </span>
-							</li>
-							<li className='flex gap-4 text-sm'>
-								<span className='flex items-center gap-1'><DiVisualstudio className=' text-blue-700' /> VSCode </span>
-								<span className='flex items-center gap-1'><DiIntellij className=' text-purple-800' /> IntelliJ </span>
-							</li>
-							<li className='flex gap-4 text-sm'>
-								<span className='flex items-center gap-1'><DiNpm className=' text-pink-700' /> Npm </span>
-								<span className='flex items-center gap-1'><img src="src/images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" /> Gradle </span>
-							</li>
-
-							<li className='flex gap-2 text-sm'>
-								<span className='flex items-center gap-1'><DiGit className=' text-orange-700' /> Git </span>
-								<span className='flex items-center gap-1'><DiGithub className=' text-purple-200' /> Github </span>
-							</li>
-
-						</ul>
-					</div>
-
-				</div>
+						</li>
+					)
+					}
+				</ul>
 			</section>
 
 
