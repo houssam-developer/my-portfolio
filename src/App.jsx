@@ -29,25 +29,25 @@ function App() {
 	const [hobbies, setHobbies] = useState([
 		{
 			type: 'Coding',
-			image: 'src/images/coding.jpg',
+			image: 'images/coding.jpg',
 			quote: 'Make it work, make it right, make it fast.',
 			quoteAuthor: 'Kent Beck'
 		},
 		{
 			type: 'Reading',
-			image: 'src/images/reading.jpg',
+			image: 'images/reading.jpg',
 			quote: 'The more that you read, the more things you will know. The more that you learn, the more places you’ll go.',
 			quoteAuthor: 'Dr. Seuss'
 		},
 		{
 			type: 'Walking',
-			image: 'src/images/walking.jpg',
+			image: 'images/walking.jpg',
 			quote: 'There is no habit you will value so much as that of walking far without fatigue.',
 			quoteAuthor: 'Thomas Jefferson'
 		},
 		{
 			type: 'Gaming',
-			image: 'src/images/gaming.jpg',
+			image: 'images/gaming.jpg',
 			quote: 'Gaming brings people together.',
 			quoteAuthor: 'Lisa Su'
 		},
@@ -66,7 +66,7 @@ function App() {
 				{ icon: <DiReact size={20} className='text-cyan-500' />, tag: 'ReactJS' },
 				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
 				{
-					icon: <img src="src/images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
+					icon: <img src="images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
 					tag: 'Typescript'
 				},
 				{ icon: <MdAspectRatio size={20} className='text-cyan-500' />, tag: 'Responsive Design' }
@@ -80,7 +80,7 @@ function App() {
 			languages: [
 				{ icon: <DiJsBadge size={20} className='text-yellow-500' />, tag: 'Javascript' },
 				{ icon: <DiNodejsSmall size={20} className='text-green-500' />, tag: 'NodeJS' },
-				{ icon: <img src="src/images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' }
+				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' }
 			]
 		},
 		{
@@ -108,11 +108,11 @@ function App() {
 				{ icon: <DiIntellij className=' text-purple-800' />, tag: 'IntelliJ' },
 				{ icon: <DiNpm className=' text-pink-700' />, tag: 'Npm' },
 				{
-					icon: <img src="src/images/vite-logo.svg" width={'18px'} height={'18px'} alt="logo of vite build tool" />,
+					icon: <img src="images/vite-logo.svg" width={'18px'} height={'18px'} alt="logo of vite build tool" />,
 					tag: 'Vite'
 				},
 				{
-					icon: <img src="src/images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" />,
+					icon: <img src="images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" />,
 					tag: 'Gradle'
 				},
 				{ icon: <DiGit className=' text-orange-700' />, tag: 'Git' },
@@ -133,7 +133,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'src/images/challenges/button-challenge.png',
+				image: 'images/challenges/button-challenge.png',
 				title: 'Button component',
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
 				demoLink: 'https://button-component-he.netlify.app/',
@@ -142,7 +142,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'src/images/challenges/input-challenge.png',
+				image: 'images/challenges/input-challenge.png',
 				title: 'Input component',
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
 				demoLink: 'https://input-component-he.netlify.app/',
@@ -151,7 +151,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'src/images/challenges/windbnb-challenge.png',
+				image: 'images/challenges/windbnb-challenge.png',
 				title: 'WindBnB Challenge',
 				description: 'Airbnb has a great UI, it so modern and clean.',
 				demoLink: 'https://winbnb-he.netlify.app/',
@@ -160,7 +160,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'src/images/challenges/todo-challenge.png',
+				image: 'images/challenges/todo-challenge.png',
 				title: 'Todo app',
 				description: 'Todo app is one of the common projects when it comes to practicing coding',
 				demoLink: 'https://todo-app-he.netlify.app/',
@@ -169,7 +169,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'src/images/challenges/edie-homepage.png',
+				image: 'images/challenges/edie-homepage.png',
 				title: 'Edie Homepage',
 				description: 'Homepage is a popular task that a developer has to do. In this challenge, I had to work with a given design and fullfil the user stories.',
 				demoLink: 'https://edie-homepage-he.netlify.app/',
@@ -178,7 +178,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'src/images/challenges/checkout-page.png',
+				image: 'images/challenges/checkout-page.png',
 				title: 'Checkout Page',
 				description: 'Checkout page use a minimal design and contains a form with differents inputs. In this challenge, I had to work with a given design and fullfil the user stories.',
 				demoLink: 'https://my-checkout-page-he.netlify.app/',
@@ -187,7 +187,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'src/images/challenges/my-gallery.png',
+				image: 'images/challenges/my-gallery.png',
 				title: 'My Gallery Page',
 				description: 'Inspired by Instagram. In this challenge, I had to work with a similar design to instagram profile page.',
 				demoLink: 'https://my-gallery-page-he.netlify.app/',
@@ -196,7 +196,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'src/images/challenges/recipe-page.png',
+				image: 'images/challenges/recipe-page.png',
 				title: 'Recipe Page',
 				description: 'Everyone loves food, especially cheesecake. In this project, I had to work with a given recipe and fullfil the user stories.',
 				demoLink: 'https://recipe-page-he.netlify.app/',
@@ -280,10 +280,10 @@ function App() {
 				<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
 					<div className='min-w-[190px] max-w-[200px]'>
 						<div className='container-ratio-1-1'>
-							<img className='rounded-full child-ratio' src="src/images/my-photo.png" alt="picture of developer" />
-							<img className='hidden rounded-full child-ratio object-top brightness-75'
-								src="src/images/my-photo-miniature-he.jpg" alt="picture of developer"
-							/>
+							<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
+							{/* <img className='hidden rounded-full child-ratio object-top brightness-75'
+								src="images/my-photo-miniature-he.jpg" alt="picture of developer"
+							/> */}
 						</div>
 					</div>
 					<div className='flex flex-col gap-1 max-w-xl'>
