@@ -251,7 +251,7 @@ function App() {
 
 	return (
 		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-900 ">
-			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[7vh] bg-neutral-900'>
+			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-900'>
 				<a className='p-4 flex items-center gap-4 text-primary' href="/">
 					<MdViewInAr size={25} />
 					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
@@ -268,7 +268,7 @@ function App() {
 
 			<main>
 				{/* HERO */}
-				<section id='sectionHero' className='section-hero h-[93vh] text-white flex flex-col gap-8 justify-center  px-6 '>
+				<section id='sectionHero' className='section-hero h-[91vh] text-white flex flex-col gap-8 justify-center  px-6 '>
 					<h2 className='font-sans font-semibold text-2xl'>
 						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
 					</h2>
@@ -278,7 +278,7 @@ function App() {
 				{/* ABOUT ME */}
 				<div className='max-w-[1440px] mx-auto'>
 					<section id='sectionAboutMe' className='container-layout-shifter-one text-white'>
-						<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded w-full'>
+						<div className='bg-neutral-800 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
@@ -287,7 +287,7 @@ function App() {
 							/> */}
 								</div>
 							</div>
-							<div className='flex flex-col gap-1 max-w-xl'>
+							<div className='flex flex-col justify-center gap-1 max-w-xl'>
 								<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
 								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
 								<p className='p-6 text-md font-sans font-normal text-primary'>
