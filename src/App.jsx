@@ -266,119 +266,123 @@ function App() {
 
 			<BottomNav />
 
-			{/* HERO */}
-			<section id='sectionHero' className='section-hero h-[93vh] text-white flex flex-col gap-8 justify-center  px-6 '>
-				<h2 className='font-sans font-semibold text-2xl'>
-					<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
-				</h2>
-				<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
-			</section>
+			<main>
+				{/* HERO */}
+				<section id='sectionHero' className='section-hero h-[93vh] text-white flex flex-col gap-8 justify-center  px-6 '>
+					<h2 className='font-sans font-semibold text-2xl'>
+						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+					</h2>
+					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+				</section>
 
-			{/* ABOUT ME */}
-
-			<section id='#sectionAboutMe' className='container-layout-shifter text-white'>
-				<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
-					<div className='min-w-[190px] max-w-[200px]'>
-						<div className='container-ratio-1-1'>
-							<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
-							{/* <img className='hidden rounded-full child-ratio object-top brightness-75'
+				{/* ABOUT ME */}
+				<div className='max-w-[1024px] mx-auto'>
+					<section id='#sectionAboutMe' className='container-layout-shifter text-white'>
+						<div className='bg-neutral-800 flex flex-col items-center gap-4 p-4 rounded'>
+							<div className='min-w-[190px] max-w-[200px]'>
+								<div className='container-ratio-1-1'>
+									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
+									{/* <img className='hidden rounded-full child-ratio object-top brightness-75'
 								src="images/my-photo-miniature-he.jpg" alt="picture of developer"
 							/> */}
+								</div>
+							</div>
+							<div className='flex flex-col gap-1 max-w-xl'>
+								<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
+								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
+								<p className='p-6 text-md font-sans font-normal text-primary'>
+									Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
+									Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
+									Si vous cherchez un developpeur Back-end, Front-end ou FullStack, alors je saurai repondre à votre besoin.
+									<br /> N'hésitez pas à me contacter pour définir votre besoin.
+									<br /><br />
+									A très bientôt
+								</p>
+							</div>
 						</div>
-					</div>
-					<div className='flex flex-col gap-1 max-w-xl'>
-						<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
-						<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
-						<p className='p-6 text-md font-sans font-normal text-primary'>
-							Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
-							Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
-							Si vous cherchez un developpeur Back-end, Front-end ou FullStack, alors je saurai repondre à votre besoin.
-							<br /> N'hésitez pas à me contacter pour définir votre besoin.
-							<br /><br />
-							A très bientôt
-						</p>
-					</div>
-				</div>
-				{/* ul is tracked as grid in layout-shifter */}
-				<ul className='container-layout-grid-skills'>
-					{skills.map(it =>
-						<li className='container-box flex flex-col items-center gap-8'>
-							<div className='flex flex-col items-center gap-4'>
-								{it.typeIcon}
-								<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
-							</div>
-
-							<ul className='w-full flex flex-wrap justify-evenly gap-3'>
-								{it.languages.map(itArg =>
-									<li
-										className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
-								}
-							</ul>
-
-						</li>
-					)
-					}
-				</ul>
-			</section>
-
-
-			{/* Hobbies backup */}
-			<section className='p-4 text-primary'>
-				<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
-				<ul className='container-layout-grid-four'>
-					{hobbies.map(it =>
-						<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
-							<h3 className='font-medium text-xl'>{it.type}</h3>
-							<div className='container-ratio-4-3 max-w-full'>
-								<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
-							</div>
-							<p className='text-md flex-grow'>
-								“{it.quote}”
-							</p>
-							<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
-						</li>
-					)
-					}
-				</ul>
-
-			</section>
-
-			<section id='#sectionProjects' className='p-4 text-primary'>
-				<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
-				<div className='flex gap-4 items-center py-4'>
-					<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
-					<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
-					<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
-				</div>
-
-				<ul className='container-layout-grid-four'>
-					{
-						projects.map(it =>
-							<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
-							border-transparent  hover:border-cyan-400 transition-[border]'>
-								<div>
-									<div className='container-ratio-4-3'>
-										<img className='child-ratio object-left rounded'
-											src={it.image} alt={`picture of project ${it.title}`} />
+						{/* ul is tracked as grid in layout-shifter */}
+						<ul className='container-layout-grid-skills'>
+							{skills.map(it =>
+								<li className='container-box flex flex-col items-center gap-8'>
+									<div className='flex flex-col items-center gap-4'>
+										{it.typeIcon}
+										<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
 									</div>
-									<ul className='flex gap-2 py-2 text-cyan-400'>
-										{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
-									</ul>
-								</div>
-								<div className='pb-5 flex flex-col justify-start flex-grow'>
-									<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
-									<p className='text-md'>{it.description}</p>
-								</div>
 
-								<div className='flex gap-4'>
-									<a className='btn-shadow' href={it.demoLink}>DEMO</a>
-									<a className='btn-shadow' href={it.codeLink}>CODE</a>
-								</div>
-							</li>
-						)
-					}
-				</ul>
-			</section>
+									<ul className='w-full flex flex-wrap justify-evenly gap-3'>
+										{it.languages.map(itArg =>
+											<li
+												className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
+										}
+									</ul>
+
+								</li>
+							)
+							}
+						</ul>
+					</section>
+
+
+					{/* Hobbies backup */}
+					<section className='p-4 text-primary'>
+						<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
+						<ul className='container-layout-grid-four'>
+							{hobbies.map(it =>
+								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow'>
+									<h3 className='font-medium text-xl'>{it.type}</h3>
+									<div className='container-ratio-4-3 max-w-full'>
+										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
+									</div>
+									<p className='text-md flex-grow'>
+										“{it.quote}”
+									</p>
+									<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
+								</li>
+							)
+							}
+						</ul>
+
+					</section>
+
+					<section id='#sectionProjects' className='p-4 text-primary'>
+						<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
+						<div className='flex gap-4 items-center py-4'>
+							<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
+							<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
+							<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
+						</div>
+
+						<ul className='container-layout-grid-four'>
+							{
+								projects.map(it =>
+									<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
+							border-transparent  hover:border-cyan-400 transition-[border]'>
+										<div>
+											<div className='container-ratio-4-3'>
+												<img className='child-ratio object-left rounded'
+													src={it.image} alt={`picture of project ${it.title}`} />
+											</div>
+											<ul className='flex gap-2 py-2 text-cyan-400'>
+												{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
+											</ul>
+										</div>
+										<div className='pb-5 flex flex-col justify-start flex-grow'>
+											<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
+											<p className='text-md'>{it.description}</p>
+										</div>
+
+										<div className='flex gap-4'>
+											<a className='btn-shadow' href={it.demoLink}>DEMO</a>
+											<a className='btn-shadow' href={it.codeLink}>CODE</a>
+										</div>
+									</li>
+								)
+							}
+						</ul>
+					</section>
+				</div>
+
+			</main>
 
 		</div>
 	)
