@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
-	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup,
-	MdAspectRatio
+	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
+	MdAspectRatio, MdDevicesOther
 } from "react-icons/md";
+import { FaGithub } from 'react-icons/fa';
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
-	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb
+	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian
 
 } from "react-icons/di";
 import './App.scss';
@@ -69,7 +70,7 @@ function App() {
 					icon: <img src="images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
 					tag: 'Typescript'
 				},
-				{ icon: <MdAspectRatio size={20} className='text-cyan-500 min-w-[18px]' />, tag: 'Responsive Design' }
+				{ icon: <MdDevicesOther size={20} className='text-cyan-500 min-w-[18px]' />, tag: 'Responsive Design' }
 			],
 		},
 		{
@@ -101,7 +102,7 @@ function App() {
 			languagesTitle: 'Tools',
 			languages: [
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
-				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Linux' },
+				{ icon: <DiDebian className=' text-orange-400 min-w-[18px]' />, tag: 'Linux' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
 				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Bash' },
 				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
@@ -116,7 +117,7 @@ function App() {
 					tag: 'Gradle'
 				},
 				{ icon: <DiGit className=' text-orange-700 min-w-[20px]' />, tag: 'Git' },
-				{ icon: <DiGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' }
+				{ icon: <FaGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' }
 			]
 		}
 	]);
@@ -133,7 +134,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/button-challenge.png',
+				image: 'images/challenges/my-button.png',
 				title: 'Button component',
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
 				demoLink: 'https://button-component-he.netlify.app/',
@@ -142,7 +143,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/input-challenge.png',
+				image: 'images/challenges/my-input.png',
 				title: 'Input component',
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
 				demoLink: 'https://input-component-he.netlify.app/',
@@ -151,7 +152,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/windbnb-challenge.png',
+				image: 'images/challenges/windbnb.png',
 				title: 'WindBnB Challenge',
 				description: 'Airbnb has a great UI, it so modern and clean.',
 				demoLink: 'https://winbnb-he.netlify.app/',
@@ -160,7 +161,7 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/todo-challenge.png',
+				image: 'images/challenges/todo-app.png',
 				title: 'Todo app',
 				description: 'Todo app is one of the common projects when it comes to practicing coding',
 				demoLink: 'https://todo-app-he.netlify.app/',
@@ -178,7 +179,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'images/challenges/checkout-page.png',
+				image: 'images/challenges/my-checkout.png',
 				title: 'Checkout Page',
 				description: 'Checkout page use a minimal design and contains a form with differents inputs. In this challenge, I had to work with a given design and fullfil the user stories.',
 				demoLink: 'https://my-checkout-page-he.netlify.app/',
@@ -196,7 +197,7 @@ function App() {
 			{
 				type: 'vanilla',
 				tags: ['HTML', 'CSS', 'RESPONSIVE'],
-				image: 'images/challenges/recipe-page.png',
+				image: 'images/challenges/my-recipe.png',
 				title: 'Recipe Page',
 				description: 'Everyone loves food, especially cheesecake. In this project, I had to work with a given recipe and fullfil the user stories.',
 				demoLink: 'https://recipe-page-he.netlify.app/',
@@ -250,8 +251,8 @@ function App() {
 	}
 
 	return (
-		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-900 ">
-			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-900'>
+		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-800 ">
+			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-800'>
 				<a className='p-4 flex items-center gap-4 text-primary' href="/">
 					<MdViewInAr size={25} />
 					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
@@ -278,13 +279,13 @@ function App() {
 				{/* ABOUT ME */}
 				<div className='max-w-[1440px] mx-auto'>
 					<section id='sectionAboutMe' className='container-layout-shifter-one text-white'>
-						<div className='bg-neutral-800 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full  border-[1px] border-neutral-500'>
+						<div className='bg-neutral-700 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full shadow'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
-									{/* <img className='hidden rounded-full child-ratio object-top brightness-75'
-								src="images/my-photo-miniature-he.jpg" alt="picture of developer"
-							/> */}
+									<img className='rounded-full child-ratio brightness-75 object-top'
+										src="images/my-photo-he.jpg" alt="picture of developer"
+									/>
 								</div>
 							</div>
 							<div className='flex flex-col justify-center gap-1 max-w-xl'>
@@ -306,7 +307,7 @@ function App() {
 						{/* ul is tracked as grid in layout-shifter */}
 						<ul className='container-layout-grid-skills'>
 							{skills.map(it =>
-								<li className='container-box flex flex-col items-center gap-8 pt-8 border-[1px] border-neutral-500'>
+								<li key={uuidv4()} className='container-box flex flex-col items-center gap-8 pt-8 shadow  bg-neutral-700'>
 									<div className='flex flex-col items-center gap-4'>
 										{it.typeIcon}
 										<h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
@@ -315,7 +316,7 @@ function App() {
 									<ul className='w-full flex flex-wrap justify-center gap-4'>
 										{it.languages.map(itArg =>
 											<li
-												className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 bg-neutral-700 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
+												className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 shadow bg-neutral-600 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
 										}
 									</ul>
 
@@ -323,28 +324,6 @@ function App() {
 							)
 							}
 						</ul>
-					</section>
-
-
-					{/* Hobbies backup */}
-					<section className='p-4 text-primary'>
-						<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
-						<ul className='container-layout-grid-four'>
-							{hobbies.map(it =>
-								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-800 shadow  border-[1px] border-neutral-500'>
-									<h3 className='font-medium text-xl'>{it.type}</h3>
-									<div className='container-ratio-4-3'>
-										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
-									</div>
-									<p className='text-md flex-grow'>
-										“{it.quote}”
-									</p>
-									<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
-								</li>
-							)
-							}
-						</ul>
-
 					</section>
 
 					<section id='sectionProjects' className='p-4 text-primary'>
@@ -358,8 +337,9 @@ function App() {
 						<ul className='container-layout-grid-four-projects'>
 							{
 								projects.map(it =>
-									<li key={uuidv4()} className='rounded p-6 bg-neutral-800 flex flex-col justify-between gap-4 border-[1px]
- border-neutral-500  hover:border-cyan-400 transition-[border]'>
+									<li key={uuidv4()}
+										className='shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
+ 										border-transparent  hover:border-cyan-400 transition-[border]'>
 										<div>
 											<div className='container-ratio-4-3'>
 												<img className='child-ratio object-left rounded'
@@ -374,15 +354,44 @@ function App() {
 											<p className='text-md'>{it.description}</p>
 										</div>
 
-										<div className='flex gap-4'>
-											<a className='btn-shadow' href={it.demoLink}>DEMO</a>
-											<a className='btn-shadow' href={it.codeLink}>CODE</a>
+										<div className='flex gap-6 self-center'>
+											<a className='btn-shadow flex items-center gap-3 ' href={it.demoLink}>
+												<MdOutlineExitToApp size={20} />
+												<span>Demo</span>
+											</a>
+											<a className='btn-shadow flex items-center gap-3' href={it.codeLink}>
+												<FaGithub size={20} />
+												<span>Code</span>
+											</a>
 										</div>
 									</li>
 								)
 							}
 						</ul>
 					</section>
+
+					{/* Hobbies backup */}
+					{/* <section className='p-4 text-primary'>
+						<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
+						<ul className='container-layout-grid-four'>
+							{hobbies.map(it =>
+								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-700 shadow  border-[1px] border-neutral-500'>
+									<h3 className='font-medium text-xl'>{it.type}</h3>
+									<div className='container-ratio-4-3'>
+										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
+									</div>
+									<p className='text-md flex-grow'>
+										“{it.quote}”
+									</p>
+									<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
+								</li>
+							)
+							}
+						</ul>
+
+					</section> */}
+
+
 				</div>
 
 			</main>
@@ -413,25 +422,25 @@ function App() {
 		return (
 			<nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-10 py-2 m-1 rounded-xl text-white bg-nav'>
 				<a href='#headerApp' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400' >
-					<div className='rounded-full bg-neutral-900 p-2 hover:bg-neutral-900 '>
+					<div className='rounded-full bg-neutral-800 p-2 hover:bg-neutral-800 '>
 						<MdHome size={24} />
 					</div>
 					<span>Home</span>
 				</a>
 				<a href='#sectionAboutMe' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400 ' >
-					<div className='rounded-full bg-neutral-900 hover:bg-neutral-900 p-2'>
+					<div className='rounded-full bg-neutral-800 hover:bg-neutral-800 p-2'>
 						<MdPerson size={24} />
 					</div>
 					<span>About Me</span>
 				</a>
 				<a href='#sectionProjects' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400' >
-					<div className='rounded-full bg-neutral-900 hover:bg-neutral-900 p-2'>
+					<div className='rounded-full bg-neutral-800 hover:bg-neutral-800 p-2'>
 						<MdWeb size={24} />
 					</div>
 					<span>Projects</span>
 				</a>
 				<a href='#sectionContactMe' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400' >
-					<div className='rounded-full bg-neutral-900 hover:bg-neutral-900 p-2'>
+					<div className='rounded-full bg-neutral-800 hover:bg-neutral-800 p-2'>
 						<MdChat size={24} />
 					</div>
 					<span>Contact Me</span>
