@@ -21,7 +21,8 @@ const ProjectType = {
 	VANILLA: 'vanilla'
 };
 
-const CV_NAME = 'CV_DeveloppeurBackend_HE_RABAT.pdf';
+//const CV_NAME = 'CV_DeveloppeurBackend_HE_RABAT.pdf';
+const CV_NAME = 'cv_template.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
@@ -255,15 +256,15 @@ function App() {
 	return (
 		<div className="h-screen mx-auto bg-neutral-800 ">
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-800'>
-				<a className='p-4 flex items-center gap-4 text-primary' href="/">
+				<a className='p-4 flex items-center gap-4 text-primary ' href="/">
 					<MdViewInAr size={25} />
 					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
 				</a>
 				<nav className='hidden md:flex right-0 text-primary font-sans font-medium gap-6 px-4'>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
-					<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
+					<a className='transition-[border] pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
+					<a className='transition-[border] pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
+					<a className='transition-[border] pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
+					<a className='transition-[border] pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
 				</nav>
 			</header>
 
@@ -301,9 +302,9 @@ function App() {
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
-									<img className='rounded-full child-ratio brightness-75 object-top'
+									{/* <img className='rounded-full child-ratio brightness-75 object-top'
 										src="images/my-photo-he.jpg" alt="picture of developer"
-									/>
+									/> */}
 								</div>
 							</div>
 							<div className='flex flex-col justify-center gap-1 max-w-xl'>
@@ -418,10 +419,10 @@ function App() {
 			<footer className=' bg-[#111] py-8'>
 				<div className='flex items-center justify-between p-4 max-w-[1024px] mx-auto min-h-[40vh] '>
 					<nav className='flex flex-col right-0 text-primary font-sans font-medium gap-6 px-4'>
-						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
-						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
-						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
-						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
+						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
+						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
+						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
+						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
 					</nav>
 					<div className='flex flex-col gap-4 text-primary'>
 						<h2 className='pb-1 border-b-2 border-transparent hover:text-white '>Social network</h2>
