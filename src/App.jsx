@@ -4,9 +4,9 @@ import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
-	MdAspectRatio, MdDevicesOther
+	MdAspectRatio, MdDevicesOther, MdFileDownload
 } from "react-icons/md";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
 	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian
@@ -20,6 +20,8 @@ const ProjectType = {
 	REACT: 'react',
 	VANILLA: 'vanilla'
 };
+
+const CV_NAME = 'CV_DeveloppeurBackend_HE_RABAT.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
@@ -251,7 +253,7 @@ function App() {
 	}
 
 	return (
-		<div className="h-screen  mx-auto min-h-[3000px] bg-neutral-800 ">
+		<div className="h-screen mx-auto bg-neutral-800 ">
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-800'>
 				<a className='p-4 flex items-center gap-4 text-primary' href="/">
 					<MdViewInAr size={25} />
@@ -269,16 +271,32 @@ function App() {
 
 			<main>
 				{/* HERO */}
-				<section id='sectionHero' className='section-hero h-[91vh] text-white flex flex-col gap-8 justify-center  px-6 '>
-					<h2 className='font-sans font-semibold text-2xl'>
-						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
-					</h2>
-					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+				<section id='sectionHero' className='flex flex-col section-hero h-[91vh] text-white'>
+					<div className='flex-grow flex justify-center items-center gap-8 '>
+						<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
+							<MdFileDownload size={20} className='text-cyan-300' />
+							<span>CV</span>
+						</a>
+						<div>|</div>
+						<nav className='flex justify-center items-center gap-4'>
+							<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
+							<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
+							<a target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
+								<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
+							</a>
+						</nav>
+					</div>
+					<div className='flex-grow flex flex-col gap-8  px-6'>
+						<h2 className='font-sans font-semibold text-2xl'>
+							<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+						</h2>
+						<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+					</div>
 				</section>
 
 				{/* ABOUT ME */}
 				<div className='max-w-[1440px] mx-auto'>
-					<section id='sectionAboutMe' className='container-layout-shifter-one text-white'>
+					<section id='sectionAboutMe' className='container-layout-shifter-one text-white py-[6em]'>
 						<div className='bg-neutral-700 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full shadow'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
@@ -331,10 +349,10 @@ function App() {
 						<div className='flex gap-4 items-center py-4'>
 							<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
 							<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
-							<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla HTML</button>
+							<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
 						</div>
 
-						<ul className='container-layout-grid-four-projects'>
+						<ul className='container-layout-grid-four-projects py-5'>
 							{
 								projects.map(it =>
 									<li key={uuidv4()}
@@ -355,11 +373,11 @@ function App() {
 										</div>
 
 										<div className='flex gap-6 self-center'>
-											<a className='btn-shadow flex items-center gap-3 ' href={it.demoLink}>
+											<a className='btn-shadow flex items-center gap-3 ' target="_blank" href={it.demoLink}>
 												<MdOutlineExitToApp size={20} />
 												<span>Demo</span>
 											</a>
-											<a className='btn-shadow flex items-center gap-3' href={it.codeLink}>
+											<a className='btn-shadow flex items-center gap-3' target="_blank" href={it.codeLink}>
 												<FaGithub size={20} />
 												<span>Code</span>
 											</a>
@@ -390,26 +408,29 @@ function App() {
 						</ul>
 
 					</section> */}
-
-
 				</div>
-
 			</main>
 
-			<footer className=' bg-[#111] '>
-				<div className='flex items-center justify-between p-4 max-w-[1024px] mx-auto min-h-[40vh] border-2 border-orange-300'>
+			<section className='bg-gray-800'>
+
+			</section>
+
+			<footer className=' bg-[#111] py-8'>
+				<div className='flex items-center justify-between p-4 max-w-[1024px] mx-auto min-h-[40vh] '>
 					<nav className='flex flex-col right-0 text-primary font-sans font-medium gap-6 px-4'>
-						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
-						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
-						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
-						<a className='pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
+						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
+						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
+						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
+						<a className='max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
 					</nav>
-					<div className='text-primary'>
-						<h2>Social network</h2>
-						<div>
-							<img src="" alt="" />
-							<img src="" alt="" />
-							<img src="" alt="" />
+					<div className='flex flex-col gap-4 text-primary'>
+						<h2 className='pb-1 border-b-2 border-transparent hover:text-white '>Social network</h2>
+						<div className='flex items-center gap-4'>
+							<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
+							<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
+							<a target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
+								<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
+							</a>
 						</div>
 					</div>
 					<p className="text-primary text-center p-4 font-medium">created by <span className='font-bold'>houssam-developer</span> - devChallenges.io</p>
