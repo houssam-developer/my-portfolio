@@ -4,7 +4,7 @@ import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
-	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear,
+	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear, MdKeyboardArrowUp
 } from "react-icons/md";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
@@ -255,6 +255,13 @@ function App() {
 
 	return (
 		<div className="h-screen mx-auto bg-neutral-800 ">
+			<div className='relative'>
+				<a href='#headerApp' className='absolute bottom-4 right-4 p-4 text-white hover:text-cyan-400' >
+					<div className='fixed bottom-4 right-4 btn-top'>
+						<MdKeyboardArrowUp size={24} />
+					</div>
+				</a>
+			</div>
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-800'>
 				<a className='p-4 flex items-center gap-4 text-primary ' href="/">
 					<MdViewInAr size={25} />
@@ -351,14 +358,14 @@ function App() {
 						<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
 					</div>
 
-					<ul className='container-layout-grid-four-projects py-5'>
+					<ul className='container-layout-grid-four-projects py-5 z-0'>
 						{
 							projects.map(it =>
 								<li key={uuidv4()}
 									className='shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
  										border-transparent  hover:border-cyan-400 transition-[border]'>
 									<div>
-										<div className='container-ratio-4-3'>
+										<div className='container-ratio-4-3 z-0'>
 											<img className='child-ratio object-left rounded'
 												src={it.image} alt={`picture of project ${it.title}`} />
 										</div>
