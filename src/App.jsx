@@ -389,7 +389,7 @@ function App() {
 
 				<section id='sectionContactMe' className='p-4 text-primary'>
 					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
-					<form className='flex flex-col text-white gap-8 max-w-[400px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
+					<form className='flex flex-col text-white gap-8 max-w-[400px] md:max-w-[500px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
 						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
 							<label htmlFor="tagName">Name</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
@@ -407,7 +407,7 @@ function App() {
 						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
 							<label htmlFor="tagMessage">Message</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-								<textarea id='tagMessage' rows={'10'} />
+								<textarea id='tagMessage' rows={'5'} />
 							</div>
 						</div>
 						<div className='flex gap-8 justify-between'>

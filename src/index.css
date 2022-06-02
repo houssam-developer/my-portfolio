@@ -29,6 +29,10 @@ textarea {
 	overflow-x: hidden;
 }
 
+textarea {
+	resize: none;
+}
+
 input:focus,
 textarea:focus {
 	color: #fff;
