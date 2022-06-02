@@ -344,7 +344,7 @@ function App() {
 
 									<ul className='w-full flex flex-wrap justify-center gap-4'>
 										{it.languages.map(itArg =>
-											<li
+											<li key={uuidv4()}
 												className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 shadow bg-neutral-600 rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
 										}
 									</ul>
@@ -465,7 +465,7 @@ function App() {
 
 	function BottomNav() {
 		return (
-			<nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-10 py-2 m-1 rounded-xl text-white bg-nav'>
+			<nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-50 py-2 m-1 rounded-xl text-white bg-nav'>
 				<a href='#headerApp' className='flex flex-col items-center gap-1 text-xs font-sans font-medium text-white hover:text-cyan-400' >
 					<div className='rounded-full bg-neutral-800 p-2 hover:bg-neutral-800 '>
 						<MdHome size={24} />
