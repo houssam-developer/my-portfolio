@@ -253,9 +253,14 @@ function App() {
 		setTypeProject(ProjectType.VANILLA);
 	}
 
+	function handleFormContactSubmitEvent(e) {
+		e.preventDefault();
+		console.log('FormContact [submit]');
+	}
+
 	return (
 		<div className="h-screen mx-auto bg-neutral-800 ">
-			<div className='relative'>
+			<div className='hidden md:block relative'>
 				<a href='#headerApp' className='absolute bottom-4 right-4 p-4 text-white hover:text-cyan-400' >
 					<div className='fixed bottom-4 right-4 btn-top'>
 						<MdKeyboardArrowUp size={24} />
@@ -396,7 +401,7 @@ function App() {
 
 				<section id='sectionContactMe' className='p-4 text-primary'>
 					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
-					<form className='flex flex-col text-white gap-8 max-w-[400px] md:max-w-[500px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
+					<form onSubmit={handleFormContactSubmitEvent} className='flex flex-col text-white gap-8 max-w-[400px] md:max-w-[500px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
 						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
 							<label htmlFor="tagName">Name</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
