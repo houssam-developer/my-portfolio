@@ -4,7 +4,7 @@ import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
-	MdAspectRatio, MdDevicesOther, MdFileDownload
+	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear,
 } from "react-icons/md";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
@@ -274,7 +274,7 @@ function App() {
 				<div className='flex-grow flex justify-center items-center gap-8 '>
 					<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
 						<MdFileDownload size={20} />
-						<span>CV</span>
+						<span>Download CV</span>
 					</a>
 					<div>|</div>
 					<nav className='flex justify-center items-center gap-4'>
@@ -386,11 +386,43 @@ function App() {
 						}
 					</ul>
 				</section>
+
+				<section id='sectionContactMe' className='p-4 text-primary'>
+					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
+					<form className='flex flex-col text-white gap-8 max-w-[400px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
+						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
+							<label htmlFor="tagName">Name</label>
+							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
+								<MdPerson size={20} className='min-w-max' />
+								<input type="text" id='tagName' />
+							</div>
+						</div>
+						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+							<label htmlFor="tagEmail">Email</label>
+							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
+								<MdEmail size={20} className='min-w-max' />
+								<input type="email" id='tagEmail' required />
+							</div>
+						</div>
+						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+							<label htmlFor="tagMessage">Message</label>
+							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
+								<textarea id='tagMessage' rows={'10'} />
+							</div>
+						</div>
+						<div className='flex gap-8 justify-between'>
+							<button type='reset' className='btn-shadow text-white  self-center flex items-center gap-3'>
+								<MdClear size={20} />
+								<span>Clear</span>
+							</button>
+							<button type='submit' className='btn-shadow btn-shadow--email text-white bg-cyan-500 self-center flex items-center gap-3'>
+								<MdSend size={20} />
+								<span>Send</span>
+							</button>
+						</div>
+					</form>
+				</section>
 			</main>
-
-			<section className='bg-gray-800'>
-
-			</section>
 
 			<footer className=' bg-[#111] py-8'>
 				<div className='flex flex-col md:flex-row md:justify-between gap-4 items-center p-4 max-w-[1024px] mx-auto min-h-[40vh] '>

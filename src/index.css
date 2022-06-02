@@ -21,6 +21,20 @@ html {
 	scroll-behavior: smooth;
 }
 
+input,
+textarea {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	overflow-x: hidden;
+}
+
+input:focus,
+textarea:focus {
+	color: #fff;
+	outline: none;
+}
+
 body {
 	@apply bg-neutral-800;
 }
