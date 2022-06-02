@@ -212,8 +212,8 @@ function App() {
 		setProjectsAll(all);
 		setProjectsReact(all.filter(it => it.type.toLowerCase() === ProjectType.REACT));
 		setProjectsVanilla(all.filter(it => it.type.toLowerCase() === ProjectType.VANILLA));
-		setProjects(projectsAll);
-		setTypeProject(ProjectType.ALL);
+		setProjects(projectsReact);
+		setTypeProject(ProjectType.REACT);
 	}, []);
 
 	useEffect(() => {
@@ -346,8 +346,8 @@ function App() {
 				<section id='sectionProjects' className='p-4 text-primary'>
 					<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 					<div className='flex gap-4 items-center py-4'>
-						<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
-						<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
+						<button ref={btnProjectsAll} className='btn-shadow' onClick={handleBtnAllEvent}>All</button>
+						<button ref={btnProjectsReact} className='btn-shadow  btn-shadow--active' onClick={handleBtnReactEvent}>React</button>
 						<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
 					</div>
 
@@ -444,7 +444,7 @@ function App() {
 						</div>
 					</div>
 
-					<p className="text-primary text-center p-4 font-medium">created by <span className='font-bold text-cyan-200'>houssam-developer</span> - devChallenges.io</p>
+					<p className="text-primary text-center p-4 font-medium">created by <span className='font-medium text-cyan-200'>houssam-developer</span> - devChallenges.io</p>
 
 				</div>
 			</footer>
