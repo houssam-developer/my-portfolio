@@ -270,34 +270,32 @@ function App() {
 
 			<BottomNav />
 
-			<main>
-				{/* HERO */}
-				<section id='sectionHero' className='flex flex-col section-hero h-[91vh] text-white'>
-					<div className='flex-grow flex justify-center items-center gap-8 '>
-						<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
-							<MdFileDownload size={20} className='text-cyan-300' />
-							<span>CV</span>
+			<section id='sectionHero' className='flex flex-col section-hero h-[91vh] text-white'>
+				<div className='flex-grow flex justify-center items-center gap-8 '>
+					<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
+						<MdFileDownload size={20} />
+						<span>CV</span>
+					</a>
+					<div>|</div>
+					<nav className='flex justify-center items-center gap-4'>
+						<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
+						<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
+						<a target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
+							<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
 						</a>
-						<div>|</div>
-						<nav className='flex justify-center items-center gap-4'>
-							<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
-							<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
-							<a target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
-								<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
-							</a>
-						</nav>
-					</div>
-					<div className='flex-grow flex flex-col gap-8  px-6'>
-						<h2 className='font-sans font-semibold text-2xl'>
-							<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
-						</h2>
-						<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
-					</div>
-				</section>
-
-				{/* ABOUT ME */}
-				<div className='max-w-[1440px] mx-auto'>
-					<section id='sectionAboutMe' className='container-layout-shifter-one text-white py-[6em]'>
+					</nav>
+				</div>
+				<div className='flex-grow flex flex-col gap-8  px-6'>
+					<h2 className='font-sans font-semibold text-2xl'>
+						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+					</h2>
+					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+				</div>
+			</section>
+			<main className='max-w-[1440px] mx-auto flex flex-col gap-12 py-12'>
+				<section id='sectionAboutMe' className='p-4 text-primary'>
+					<h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
+					<div className='container-layout-shifter-one '>
 						<div className='bg-neutral-700 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full shadow'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
@@ -343,73 +341,51 @@ function App() {
 							)
 							}
 						</ul>
-					</section>
+					</div>
+				</section>
+				<section id='sectionProjects' className='p-4 text-primary'>
+					<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
+					<div className='flex gap-4 items-center py-4'>
+						<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
+						<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
+						<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
+					</div>
 
-					<section id='sectionProjects' className='p-4 text-primary'>
-						<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
-						<div className='flex gap-4 items-center py-4'>
-							<button ref={btnProjectsAll} className='btn-shadow btn-shadow--active' onClick={handleBtnAllEvent}>All</button>
-							<button ref={btnProjectsReact} className='btn-shadow' onClick={handleBtnReactEvent}>React</button>
-							<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
-						</div>
-
-						<ul className='container-layout-grid-four-projects py-5'>
-							{
-								projects.map(it =>
-									<li key={uuidv4()}
-										className='shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
+					<ul className='container-layout-grid-four-projects py-5'>
+						{
+							projects.map(it =>
+								<li key={uuidv4()}
+									className='shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
  										border-transparent  hover:border-cyan-400 transition-[border]'>
-										<div>
-											<div className='container-ratio-4-3'>
-												<img className='child-ratio object-left rounded'
-													src={it.image} alt={`picture of project ${it.title}`} />
-											</div>
-											<ul className='flex gap-2 py-2 text-cyan-400'>
-												{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
-											</ul>
+									<div>
+										<div className='container-ratio-4-3'>
+											<img className='child-ratio object-left rounded'
+												src={it.image} alt={`picture of project ${it.title}`} />
 										</div>
-										<div className='pb-5 flex flex-col justify-start flex-grow'>
-											<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
-											<p className='text-md'>{it.description}</p>
-										</div>
-
-										<div className='flex gap-6 self-center'>
-											<a className='btn-shadow flex items-center gap-3 ' target="_blank" href={it.demoLink}>
-												<MdOutlineExitToApp size={20} />
-												<span>Demo</span>
-											</a>
-											<a className='btn-shadow flex items-center gap-3' target="_blank" href={it.codeLink}>
-												<FaGithub size={20} />
-												<span>Code</span>
-											</a>
-										</div>
-									</li>
-								)
-							}
-						</ul>
-					</section>
-
-					{/* Hobbies backup */}
-					{/* <section className='p-4 text-primary'>
-						<h2 className='text-2xl font-sans font-semibold mb-4'>Hobbies</h2>
-						<ul className='container-layout-grid-four'>
-							{hobbies.map(it =>
-								<li key={uuidv4()} className=' flex flex-col gap-5 p-6 rounded bg-neutral-700 shadow  border-[1px] border-neutral-500'>
-									<h3 className='font-medium text-xl'>{it.type}</h3>
-									<div className='container-ratio-4-3'>
-										<img className='child-ratio rounded-xl' src={it.image} alt="picture of hobbies" />
+										<ul className='flex gap-2 py-2 text-cyan-400'>
+											{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
+										</ul>
 									</div>
-									<p className='text-md flex-grow'>
-										“{it.quote}”
-									</p>
-									<p className='text-md text-[#bbb]'>— {it.quoteAuthor}</p>
+									<div className='pb-5 flex flex-col justify-start flex-grow'>
+										<h3 className='font-semibold text-xl font-sans mb-2'>{it.title}</h3>
+										<p className='text-md'>{it.description}</p>
+									</div>
+
+									<div className='flex gap-6 self-center'>
+										<a className='btn-shadow flex items-center gap-3 ' target="_blank" href={it.demoLink}>
+											<MdOutlineExitToApp size={20} />
+											<span>Demo</span>
+										</a>
+										<a className='btn-shadow flex items-center gap-3' target="_blank" href={it.codeLink}>
+											<FaGithub size={20} />
+											<span>Code</span>
+										</a>
+									</div>
 								</li>
 							)
-							}
-						</ul>
-
-					</section> */}
-				</div>
+						}
+					</ul>
+				</section>
 			</main>
 
 			<section className='bg-gray-800'>
@@ -417,15 +393,16 @@ function App() {
 			</section>
 
 			<footer className=' bg-[#111] py-8'>
-				<div className='flex items-center justify-between p-4 max-w-[1024px] mx-auto min-h-[40vh] '>
-					<nav className='flex flex-col right-0 text-primary font-sans font-medium gap-6 px-4'>
+				<div className='flex flex-col md:flex-row md:justify-between gap-4 items-center p-4 max-w-[1024px] mx-auto min-h-[40vh] '>
+
+					<nav className='hidden md:flex text-sm md:flex-col md:text-md right-0 text-primary font-sans font-medium gap-6 px-4'>
 						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>
 						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionAboutMe">About me</a>
 						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionProjects">Projects</a>
 						<a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
 					</nav>
-					<div className='flex flex-col gap-4 text-primary'>
-						<h2 className='pb-1 border-b-2 border-transparent hover:text-white '>Social network</h2>
+
+					<div className='flex flex-col gap-2 text-primary'>
 						<div className='flex items-center gap-4'>
 							<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
 							<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
@@ -434,7 +411,9 @@ function App() {
 							</a>
 						</div>
 					</div>
-					<p className="text-primary text-center p-4 font-medium">created by <span className='font-bold'>houssam-developer</span> - devChallenges.io</p>
+
+					<p className="text-primary text-center p-4 font-medium">created by <span className='font-bold text-cyan-200'>houssam-developer</span> - devChallenges.io</p>
+
 				</div>
 			</footer>
 		</div>

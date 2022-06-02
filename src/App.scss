@@ -45,16 +45,23 @@
 
 .container-layout-grid-four-projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 1em;
+
+	@media screen and (min-width: 400px) {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
 }
 
 .container-layout-grid-skills {
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 1em;
 
+	@media screen and (min-width: 400px) {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
 }
 
 .container-layout-grid-skills-small {
@@ -78,6 +85,12 @@
 	@apply px-4 py-2 border-[1px] rounded font-sans font-semibold text-sm text-white bg-transparent border-neutral-500 transition-shadow;
 
 	cursor: pointer;
+
+	@media screen and (max-width: 350px) {
+		font-size: .7rem;
+	}
+
+
 
 	&:hover {
 		@apply border-cyan-600 shadow-[0_0_10px_#22d3ee];
