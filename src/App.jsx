@@ -1,10 +1,11 @@
 
 import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
-	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear, MdKeyboardArrowUp
+	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear, MdKeyboardArrowUp, MdSubject
 } from "react-icons/md";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
@@ -256,6 +257,14 @@ function App() {
 	function handleFormContactSubmitEvent(e) {
 		e.preventDefault();
 		console.log('FormContact [submit]');
+
+		emailjs.sendForm('service_9s9jrt6', 'template_znu5or3', e.target, 'X_VMHh7poUMyeIkkS')
+			.then((result) => {
+				console.log(result.text);
+			}, (error) => {
+				console.log(error.text);
+			});
+		e.target.reset();
 	}
 
 	return (
@@ -403,23 +412,30 @@ function App() {
 					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
 					<form onSubmit={handleFormContactSubmitEvent} className='flex flex-col text-white gap-8 max-w-[400px] md:max-w-[500px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
 						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
-							<label htmlFor="tagName">Name</label>
+							<label htmlFor="tagName">Your Name</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
 								<MdPerson size={20} className='min-w-max' />
-								<input type="text" id='tagName' />
+								<input type="text" id='tagName' name='name' />
 							</div>
 						</div>
 						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
-							<label htmlFor="tagEmail">Email</label>
+							<label htmlFor="tagEmail">Your Email</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
 								<MdEmail size={20} className='min-w-max' />
-								<input type="email" id='tagEmail' required />
+								<input type="email" id='tagEmail' name='email' required />
 							</div>
 						</div>
 						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
-							<label htmlFor="tagMessage">Message</label>
+							<label htmlFor="tagSubject">Subject</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-								<textarea id='tagMessage' rows={'5'} />
+								<MdSubject size={20} className='min-w-max' />
+								<input type="text" id='tagSubject' name='subject' />
+							</div>
+						</div>
+						<div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+							<label htmlFor="tagMessage">Your Message</label>
+							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
+								<textarea id='tagMessage' rows={'5'} name='message' />
 							</div>
 						</div>
 						<div className='flex gap-8 justify-between'>
