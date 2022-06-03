@@ -463,10 +463,10 @@ function App() {
 					</nav>
 
 					<div className='flex flex-col gap-2 text-primary'>
-						<div className='flex items-center gap-4 pb-4'>
-							<a target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
-							<a target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
-							<a target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
+						<div className='flex items-center gap-4 p-4'>
+							<a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
+							<a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
+							<a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
 								<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
 							</a>
 						</div>
