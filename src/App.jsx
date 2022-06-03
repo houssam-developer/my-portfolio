@@ -10,7 +10,7 @@ import {
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
-	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian
+	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian, DiJava
 
 } from "react-icons/di";
 import './App.scss';
@@ -85,7 +85,8 @@ function App() {
 			languages: [
 				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
 				{ icon: <DiNodejsSmall size={20} className='text-green-500 min-w-[18px]' />, tag: 'NodeJS' },
-				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' }
+				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' },
+				{ icon: <DiJava size={20} className='text-[#026d8e]' />, tag: 'Java' }
 			]
 		},
 		{
@@ -106,7 +107,7 @@ function App() {
 			languagesTitle: 'Tools',
 			languages: [
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
-				{ icon: <DiDebian className=' text-orange-400 min-w-[18px]' />, tag: 'Linux' },
+				{ icon: <DiDebian className=' text-slate-800 min-w-[18px]' />, tag: 'Linux' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
 				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Bash' },
 				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
