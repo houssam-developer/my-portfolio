@@ -280,7 +280,7 @@ function App() {
 			<header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] bg-neutral-800'>
 				<a className='p-4 flex items-center gap-4 text-primary ' href="/">
 					<MdViewInAr size={25} />
-					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam Developer</h1>
+					<h1 className='text-lg font-sans font-semibold text-primary'>Houssam EL ATMANI</h1>
 				</a>
 				<nav className='hidden md:flex right-0 text-primary font-sans font-medium gap-6 px-4'>
 					<a className='transition-[border] pb-1 border-b-2 border-transparent hover:text-white hover:border-cyan-400' href="#headerApp">Home</a>

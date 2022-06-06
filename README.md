@@ -53,14 +53,6 @@ And I hope to make more beautifuls websites and become an expert in front-end de
 - [React-Icons] (https://react-icons.github.io/react-icons/)
 - [UUID] (https://www.npmjs.com/package/uuid)
 - [Vite] (https://vitejs.dev/)
-
-
-### Built With
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
