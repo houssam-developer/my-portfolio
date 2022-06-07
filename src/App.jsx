@@ -159,7 +159,7 @@ function App() {
 				tags: ['React', 'React-Icons', 'Tailwind'],
 				image: 'images/challenges/country-quiz.png',
 				title: 'Country Quiz',
-				description: 'Quiz about countries and flags using API [restcountries.com]',
+				description: 'Quiz about countries and flags using restcountries.com as an API]',
 				demoLink: 'https://country-quiz-he.netlify.app/',
 				codeLink: 'https://github.com/houssam-developer/country-quiz'
 			},
@@ -339,7 +339,7 @@ function App() {
 								<h2 className='font-sans text-xl font-semibold self-center'>Houssam EL ATMANI</h2>
 								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
 								<p className='p-6 text-md font-sans font-normal text-primary'>
-									Hi!, my name is Houssam. I am a Front-End developer.<br />
+									Hi, my name is Houssam. I am a Front-End developer.<br />
 									I got multiple skills and I am a self taught developer <br />
 									I can help you build your web application.<br />
 								</p>
