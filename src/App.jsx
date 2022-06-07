@@ -159,7 +159,7 @@ function App() {
 				tags: ['React', 'React-Icons', 'Tailwind'],
 				image: 'images/challenges/country-quiz.png',
 				title: 'Country Quiz',
-				description: 'Quiz about countries and flags using restcountries.com as an API]',
+				description: 'Quiz about countries and flags using restcountries.com as an API',
 				demoLink: 'https://country-quiz-he.netlify.app/',
 				codeLink: 'https://github.com/houssam-developer/country-quiz'
 			},
