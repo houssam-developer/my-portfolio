@@ -22,8 +22,8 @@ const ProjectType = {
 	VANILLA: 'vanilla'
 };
 
-//const CV_NAME = 'CV_DeveloppeurBackend_HE_RABAT.pdf';
-const CV_NAME = 'cv_template.pdf';
+
+const CV_NAME = 'CV_Houssam_El_atmani_Developpeur_FrontEnd_React_Rabat.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
@@ -321,22 +321,18 @@ function App() {
 						<div className='bg-neutral-700 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full shadow'>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
-									<img className='rounded-full child-ratio' src="images/my-photo.png" alt="picture of developer" />
-									{/* <img className='rounded-full child-ratio brightness-75 object-top'
+									<img className='rounded-full child-ratio brightness-75 object-top'
 										src="images/my-photo-he.jpg" alt="picture of developer"
-									/> */}
+									/>
 								</div>
 							</div>
 							<div className='flex flex-col justify-center gap-1 max-w-xl'>
-								<h2 className='font-sans text-xl font-semibold self-center'>Houssam Developer</h2>
+								<h2 className='font-sans text-xl font-semibold self-center'>Houssam EL ATMANI</h2>
 								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
 								<p className='p-6 text-md font-sans font-normal text-primary'>
-									Bonjour, je m'appelle Houssam. Je suis un développeur Fullstack.<br />
-									Avec mes competences, je sais concevoir et mettre en place des applications web.<br />
-									Si vous cherchez un developpeur Back-end, Front-end ou FullStack, alors je saurai repondre à votre besoin.
-									<br /> N'hésitez pas à me contacter pour définir votre besoin.
-									<br /><br />
-									A très bientôt
+									Hi!, my name is Houssam. I am a Front-End developer.<br />
+									I got multiple skills and I am a self taught developer <br />
+									I can help you build your web application.<br />
 								</p>
 							</div>
 							<div>
