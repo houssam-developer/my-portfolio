@@ -53,7 +53,7 @@ And I hope to make more beautifuls websites and become an expert in front-end de
 - [React-Icons] (https://react-icons.github.io/react-icons/)
 - [UUID] (https://www.npmjs.com/package/uuid)
 - [Vite] (https://vitejs.dev/)
-- [Tailwind](https://tailwindcss.com/)
+- [Tailwind] (https://tailwindcss.com/)
 
 ## Features
 
