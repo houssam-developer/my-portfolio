@@ -139,6 +139,33 @@ function App() {
 			{
 				type: 'React',
 				tags: ['React', 'React-Icons'],
+				image: 'images/challenges/windbnb.png',
+				title: 'WindBnB Challenge',
+				description: 'Airbnb has a great UI, it so modern and clean.',
+				demoLink: 'https://winbnb-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/windbnb'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'images/challenges/todo-app.png',
+				title: 'Todo App',
+				description: 'Todo app is one of the common projects when it comes to practicing coding',
+				demoLink: 'https://todo-app-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/todo-app'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons', 'Tailwind'],
+				image: 'images/challenges/country-quiz.png',
+				title: 'Country Quiz',
+				description: 'Quiz about countries and flags using API [restcountries.com]',
+				demoLink: 'https://country-quiz-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/country-quiz'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
 				image: 'images/challenges/my-button.png',
 				title: 'Button component',
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable button.',
@@ -153,24 +180,6 @@ function App() {
 				description: 'One of the best ways to learn front-end libraries is to create a reusable component. My task was to to create a reusable input.',
 				demoLink: 'https://input-component-he.netlify.app/',
 				codeLink: 'https://github.com/houssam-developer/input-component'
-			},
-			{
-				type: 'React',
-				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/windbnb.png',
-				title: 'WindBnB Challenge',
-				description: 'Airbnb has a great UI, it so modern and clean.',
-				demoLink: 'https://winbnb-he.netlify.app/',
-				codeLink: 'https://github.com/houssam-developer/windbnb'
-			},
-			{
-				type: 'React',
-				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/todo-app.png',
-				title: 'Todo app',
-				description: 'Todo app is one of the common projects when it comes to practicing coding',
-				demoLink: 'https://todo-app-he.netlify.app/',
-				codeLink: 'https://github.com/houssam-developer/todo-app'
 			},
 			{
 				type: 'vanilla',
