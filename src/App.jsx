@@ -420,7 +420,7 @@ function App() {
 											<img className='child-ratio object-left rounded'
 												src={it.image} alt={`picture of project ${it.title}`} />
 										</div>
-										<ul className='flex flex-wrap gap-3 py-2 text-cyan-400'>
+										<ul className='flex flex-wrap gap-x-4 py-2 text-cyan-400'>
 											{it.tags.map(tag => <li key={uuidv4()} className='min-w-min'>{`#${tag}`}</li>)}
 										</ul>
 									</div>
