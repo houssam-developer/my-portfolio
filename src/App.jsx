@@ -148,21 +148,30 @@ function App() {
 			},
 			{
 				type: 'React',
-				tags: ['React', 'React-Icons'],
-				image: 'images/challenges/todo-app.png',
-				title: 'Todo App',
-				description: 'Todo app is one of the common projects when it comes to practicing coding',
-				demoLink: 'https://todo-app-he.netlify.app/',
-				codeLink: 'https://github.com/houssam-developer/todo-app'
-			},
-			{
-				type: 'React',
 				tags: ['React', 'React-Icons', 'Tailwind'],
 				image: 'images/challenges/country-quiz.png',
 				title: 'Country Quiz',
 				description: 'Quiz about countries and flags using restcountries.com as an API',
 				demoLink: 'https://country-quiz-he.netlify.app/',
 				codeLink: 'https://github.com/houssam-developer/country-quiz'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons', 'Tailwind', 'OpenWeatherApi'],
+				image: 'images/challenges/weather-app.png',
+				title: 'Weather App',
+				description: 'A Weather App with multiple options. Using OpenWeather as an API',
+				demoLink: 'https://weather-app-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/weather-app'
+			},
+			{
+				type: 'React',
+				tags: ['React', 'React-Icons'],
+				image: 'images/challenges/todo-app.png',
+				title: 'Todo App',
+				description: 'Todo app is one of the common projects when it comes to practicing coding',
+				demoLink: 'https://todo-app-he.netlify.app/',
+				codeLink: 'https://github.com/houssam-developer/todo-app'
 			},
 			{
 				type: 'React',
@@ -411,8 +420,8 @@ function App() {
 											<img className='child-ratio object-left rounded'
 												src={it.image} alt={`picture of project ${it.title}`} />
 										</div>
-										<ul className='flex gap-2 py-2 text-cyan-400'>
-											{it.tags.map(tag => <li key={uuidv4()}>{`#${tag}`}</li>)}
+										<ul className='flex flex-wrap gap-3 py-2 text-cyan-400'>
+											{it.tags.map(tag => <li key={uuidv4()} className='min-w-min'>{`#${tag}`}</li>)}
 										</ul>
 									</div>
 									<div className='pb-5 flex flex-col justify-start flex-grow'>
