@@ -21,6 +21,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+
+body {
+	@apply bg-neutral-800;
+}
+
 input,
 textarea {
 	background-color: transparent;
@@ -39,10 +44,9 @@ textarea:focus {
 	outline: none;
 }
 
-body {
-	@apply bg-neutral-800;
+.hidden {
+	display: none;
 }
-
 
 .container-hobbies {
 	border: 2px solid orange;
@@ -90,8 +94,6 @@ body {
 	padding-bottom: 56.25%;
 }
 
-
-
 .child-ratio {
 	position: absolute;
 	top: 0;
@@ -109,8 +111,6 @@ body {
 .primary-bg-dark {
 	background-color: #113f67;
 }
-
-
 
 .primary-text-light {
 	color: #a2a8d3;
@@ -134,15 +134,15 @@ body {
 .my-title {
 	position: relative;
 	padding-bottom: .5em;
-}
 
-.my-title::after {
-	position: absolute;
-	content: '';
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	@apply border-b-4 border-x-0 rounded-xl border-cyan-400;
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@apply border-b-4 border-x-0 rounded-xl border-cyan-400;
+	}
 }
 
 .bg-nav {

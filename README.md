@@ -101,7 +101,9 @@ $ npm run dev
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
 - [React] (https://reactjs.org/)
+- [React-Icons] (https://react-icons.github.io/react-icons/)
 - [Vite] (https://vitejs.dev/)
+- [Tailwind] (https://tailwindcss.com/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact

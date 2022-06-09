@@ -5,7 +5,7 @@ import {
 	MdEmail, MdPhone, MdViewInAr, MdHome, MdPerson, MdWork,
 	MdOutlineCode, MdWeb, MdOutlineConstruction, MdContacts, MdChat, MdLaptop,
 	MdOutlinePhonelink, MdDns, MdCode, MdOutlineSettingsApplications, MdBackup, MdOutlineExitToApp,
-	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear, MdKeyboardArrowUp, MdSubject
+	MdAspectRatio, MdDevicesOther, MdFileDownload, MdSend, MdClear, MdKeyboardArrowUp, MdSubject, MdOutlineCheckCircle, MdClose, MdOutlineErrorOutline
 } from "react-icons/md";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
@@ -130,6 +130,7 @@ function App() {
 	const btnProjectsAll = useRef();
 	const btnProjectsReact = useRef();
 	const btnProjectsVanilla = useRef();
+	const containerAlertRef = useRef();
 
 	// WARN: on each render empty [] is applied to projectAll => don't do that
 	// let projectAll = [];
@@ -271,14 +272,35 @@ function App() {
 		emailjs.sendForm('service_9s9jrt6', 'template_znu5or3', e.target, 'X_VMHh7poUMyeIkkS')
 			.then((result) => {
 				console.log(result.text);
+				showNotification();
 			}, (error) => {
 				console.log(error.text);
+				alert(`Your message has not been sent! can you try again #error: ${error.text}`);
 			});
+
 		e.target.reset();
+	}
+
+	function showNotification() {
+		containerAlertRef.current.classList.remove('hidden');
+		containerAlertRef.current.classList.remove("hide");
+		containerAlertRef.current.classList.add("show");
+		containerAlertRef.current.classList.add("show-alert");
+		setTimeout(() => {
+			containerAlertRef.current.classList.remove("show");
+			containerAlertRef.current.classList.add("hide");
+		}, 3000);
 	}
 
 	return (
 		<div className="h-screen mx-auto bg-neutral-800 ">
+			<div ref={containerAlertRef} className="alert hidden hide">
+				<MdOutlineCheckCircle size={24} />
+				<span className="alert__message">Your message has been sent!</span>
+				<button className="alert__close-btn">
+					<MdClose size={24} />
+				</button>
+			</div>
 			<div className='hidden md:block relative'>
 				<a href='#headerApp' className='absolute bottom-4 right-4 p-4 text-white hover:text-cyan-400' >
 					<div className='fixed bottom-4 right-4 btn-top'>
