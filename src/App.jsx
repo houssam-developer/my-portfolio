@@ -357,8 +357,8 @@ function App() {
 			<main className='max-w-[1440px] mx-auto flex flex-col gap-12 py-12'>
 				<section id='sectionAboutMe' className='p-4 text-primary'>
 					<h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
-					<div className='container-layout-shifter-one '>
-						<div className='bg-neutral-700 flex flex-col xl:justify-center items-center gap-4 p-4 rounded w-full shadow'>
+					<div className='max-w-[1024px] mx-auto flex flex-wrap gap-4'>
+						<div className='p-8 rounded w-full shadow bg-neutral-700 flex flex-col md:flex-row justify-center items-center gap-4 '>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
 									<img className='rounded-full child-ratio brightness-75 object-top'
@@ -366,12 +366,12 @@ function App() {
 									/>
 								</div>
 							</div>
-							<div className='flex flex-col justify-center gap-1 max-w-xl'>
+							<div className='flex flex-col justify-center gap-1 max-w-xl w-full'>
 								<h2 className='font-sans text-xl font-semibold self-center'>Houssam EL ATMANI</h2>
 								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>FRONT END DEVELOPER</h3>
-								<p className='p-6 text-md font-sans font-normal text-primary'>
+								<p className='p-6 text-md font-sans font-normal text-primary text-center'>
 									Hi, my name is Houssam. I am a Front-End developer.<br />
-									I got multiple skills and I am a self taught developer <br />
+									I got multiple skills and I am a self taught developer. <br />
 									I can help you build your web application.<br />
 								</p>
 							</div>
