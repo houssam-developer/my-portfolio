@@ -402,7 +402,7 @@ function App() {
 						</ul>
 					</div>
 				</section>
-				<section id='sectionProjects' className='p-4 text-primary'>
+				<section id='sectionProjects' className='p-4 text-primary max-w-[1024px] mx-auto'>
 					<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 					<div className='flex gap-4 items-center py-4'>
 						<button ref={btnProjectsAll} className='btn-shadow' onClick={handleBtnAllEvent}>All</button>
@@ -410,11 +410,11 @@ function App() {
 						<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
 					</div>
 
-					<ul className='container-layout-grid-four-projects py-5 z-0'>
+					<ul className='py-5 z-0  flex flex-wrap justify-evenly gap-8'>
 						{
 							projects.map(it =>
 								<li key={uuidv4()}
-									className='max-w-[300px] shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
+									className='max-w-[300px] shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-2 border-[1px]
  										border-transparent  hover:border-cyan-400 transition-[border]'>
 									<div>
 										<div className='container-ratio-4-3 z-0'>
