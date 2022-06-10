@@ -355,9 +355,9 @@ function App() {
 				</div>
 			</section>
 			<main className='max-w-[1440px] mx-auto flex flex-col gap-12 py-12'>
-				<section id='sectionAboutMe' className='p-4 text-primary'>
+				<section id='sectionAboutMe' className='p-4 text-primary max-w-[1024px] mx-auto '>
 					<h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
-					<div className='max-w-[1024px] mx-auto flex flex-wrap gap-4'>
+					<div className='flex flex-wrap gap-4'>
 						<div className='p-8 rounded w-full shadow bg-neutral-700 flex flex-col md:flex-row justify-center items-center gap-4 '>
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-1-1'>
@@ -445,9 +445,9 @@ function App() {
 					</ul>
 				</section>
 
-				<section id='sectionContactMe' className='p-4 text-primary'>
+				<section id='sectionContactMe' className='p-4 text-primary max-w-[400px] md:max-w-[500px] mx-auto'>
 					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
-					<form onSubmit={handleFormContactSubmitEvent} className='flex flex-col text-white gap-8 max-w-[400px] md:max-w-[500px] mx-auto bg-neutral-700 rounded p-4 sm:p-8'>
+					<form onSubmit={handleFormContactSubmitEvent} className='flex flex-col text-white gap-8  bg-neutral-700 rounded p-4 sm:p-8'>
 						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
 							<label htmlFor="tagName">Your Name</label>
 							<div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
