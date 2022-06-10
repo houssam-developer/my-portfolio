@@ -333,8 +333,14 @@ function App() {
 
 			<BottomNav />
 
-			<section id='sectionHero' className='flex flex-col section-hero h-[91vh] text-white'>
-				<div className='flex-grow flex justify-center items-center gap-8 '>
+			<section id='sectionHero' className='flex flex-col justify-center items-center gap-12 section-hero h-[91vh] text-white'>
+				<div className='flex flex-col items-center gap-8 p-8'>
+					<h2 className='font-sans font-semibold text-2xl pb-2'>
+						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+					</h2>
+					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+				</div>
+				<div className='flex justify-center items-center gap-8 '>
 					<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
 						<MdFileDownload size={20} />
 						<span>Download CV</span>
@@ -348,12 +354,7 @@ function App() {
 						</a>
 					</nav>
 				</div>
-				<div className='flex-grow flex flex-col gap-8  px-6'>
-					<h2 className='font-sans font-semibold text-2xl'>
-						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
-					</h2>
-					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
-				</div>
+
 			</section>
 			<main className='max-w-[1440px] mx-auto flex flex-col gap-12 py-12'>
 				<section id='sectionAboutMe' className='p-4 text-primary max-w-[1024px] mx-auto '>
