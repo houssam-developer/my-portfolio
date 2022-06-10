@@ -10,7 +10,7 @@ import {
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
 	DiCss3, DiJsBadge, DiHtml5, DiSass, DiReact, DiNodejs, DiNpm, DiIntellij, DiVisualstudio, DiWindows,
-	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian, DiJava
+	DiLinux, DiGithub, DiGit, DiResponsive, DiNodejsSmall, DiMysql, DiSqllite, DiMongodb, DiDebian, DiJava, DiPostgresql
 
 } from "react-icons/di";
 import './App.scss';
@@ -86,7 +86,7 @@ function App() {
 				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
 				{ icon: <DiNodejsSmall size={20} className='text-green-500 min-w-[18px]' />, tag: 'NodeJS' },
 				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' },
-				{ icon: <DiJava size={20} className='text-[#026d8e]' />, tag: 'Java' }
+				{ icon: <DiJava size={20} className='text-red-400' />, tag: 'Java' }
 			]
 		},
 		{
@@ -95,8 +95,9 @@ function App() {
 			description: 'I know how to use Databases',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiMysql size={20} className='text-blue-500 min-w-[18px]' />, tag: 'MySQL' },
-				{ icon: <DiSqllite size={20} className='text-neutral-500 min-w-[18px]' />, tag: 'SQLite' },
+				{ icon: <DiMysql size={20} className='text-blue-400 min-w-[18px]' />, tag: 'MySQL' },
+				{ icon: <DiPostgresql size={20} className='text-blue-300 min-w-[18px]' />, tag: 'PostgreSQL' },
+				{ icon: <DiSqllite size={20} className='text-neutral-400 min-w-[18px]' />, tag: 'SQLite' },
 				{ icon: <DiMongodb size={20} className='text-green-700 min-w-[18px]' />, tag: 'MongoDB' }
 			]
 		},
@@ -107,9 +108,9 @@ function App() {
 			languagesTitle: 'Tools',
 			languages: [
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
-				{ icon: <DiDebian className=' text-slate-800 min-w-[18px]' />, tag: 'Linux' },
+				{ icon: <DiDebian className=' text-[#d0074e] min-w-[18px]' />, tag: 'Linux' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
-				{ icon: <DiLinux className=' text-orange-400 min-w-[18px]' />, tag: 'Bash' },
+				{ icon: <DiLinux className=' text-neutral-900 min-w-[18px]' />, tag: 'Bash' },
 				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
 				{ icon: <DiIntellij className=' text-purple-800 min-w-[18px]' />, tag: 'IntelliJ' },
 				{ icon: <DiNpm className=' text-pink-700 min-w-[18px]' />, tag: 'Npm' },
