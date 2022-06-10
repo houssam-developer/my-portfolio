@@ -359,10 +359,10 @@ function App() {
 				<section id='sectionAboutMe' className='p-4 text-primary max-w-[1024px] mx-auto '>
 					<h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
 					<div className='flex flex-wrap gap-4'>
-						<div className='p-8 rounded w-full shadow bg-neutral-700 flex flex-col md:flex-row justify-center items-center gap-4 '>
+						<div className='p-4 rounded w-full shadow bg-neutral-700 flex flex-col md:flex-row justify-center items-center gap-4 '>
 							<div className='min-w-[190px]'>
-								<div className='container-ratio-1-1'>
-									<img className='rounded-full child-ratio brightness-75 object-top'
+								<div className='container-ratio-2-22'>
+									<img className='rounded-md child-ratio brightness-75 object-top scale-[.70] md:scale-[.85]'
 										src="images/my-photo-he.jpg" alt="picture of developer"
 									/>
 								</div>
@@ -414,11 +414,11 @@ function App() {
 						{
 							projects.map(it =>
 								<li key={uuidv4()}
-									className='shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
+									className='max-w-[300px] shadow rounded p-6 bg-neutral-700 flex flex-col justify-between gap-4 border-[1px]
  										border-transparent  hover:border-cyan-400 transition-[border]'>
 									<div>
 										<div className='container-ratio-4-3 z-0'>
-											<img className='child-ratio object-left rounded'
+											<img className='child-ratio rounded '
 												src={it.image} alt={`picture of project ${it.title}`} />
 										</div>
 										<ul className='flex flex-wrap gap-x-4 py-2 text-cyan-400'>
