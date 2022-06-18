@@ -191,3 +191,9 @@
 		transform: translateX(100%);
 	}
 }
+
+.contact-me {
+	@apply p-4 text-primary mx-auto;
+	width: 95vw;
+	max-width: 500px;
+}

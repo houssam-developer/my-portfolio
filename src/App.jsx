@@ -334,23 +334,23 @@ function App() {
 			<BottomNav />
 
 			<section id='sectionHero' className='flex flex-col justify-center items-center gap-12 section-hero h-[91vh] text-white'>
-				<div className='flex flex-col items-center gap-8 p-8'>
-					<h2 className='font-sans font-semibold text-2xl pb-2'>
-						<span className='font-sans font-semibold text-2xl my-title'>Front</span> End Developer
+				<div className='flex flex-col items-center gap-8 p-4 sm:p-8'>
+					<h2 className='font-sans font-semibold text-xl sm:text-xl pb-2 w-full'>
+						<span className='font-sans font-semibold text-xl sm:text-xl my-title'>Front</span> End Developer
 					</h2>
-					<p className='font-sans font-normal text-xl'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
+					<p className='font-sans font-normal sm:text-xl max-w-lg'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
 				</div>
-				<div className='flex justify-center items-center gap-8 '>
+				<div className='flex justify-center items-center gap-4 md:gap-8'>
 					<a download={`${CV_NAME}`} href={`myfiles/${CV_NAME}`} className='btn-shadow flex items-center gap-2 bg-neutral-600 text-white hover:text-cyan-300'>
 						<MdFileDownload size={20} />
 						<span>Download CV</span>
 					</a>
-					<div>|</div>
+					<div className='hidden sm:block'>|</div>
 					<nav className='flex justify-center items-center gap-4'>
-						<a className='transition-[padding] hover:pb-2' target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
+						<a className='transition-[padding] hover:pb-2' target="_blank" href="https://github.com/houssam-developer"><FaGithub className='' size={30} /></a>
 						<a className='transition-[padding] hover:pb-2' target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
 						<a className='transition-[padding] hover:pb-2' target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
-							<img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
+							<img src="images/devchallenges.png" alt="logo of devchallenges" className='min-w-[18px] min-h-[18px]' width={'30px'} height={'30px'} />
 						</a>
 					</nav>
 				</div>
@@ -447,7 +447,7 @@ function App() {
 					</ul>
 				</section>
 
-				<section id='sectionContactMe' className='p-4 text-primary max-w-[400px] md:max-w-[500px] mx-auto'>
+				<section id='sectionContactMe' className='contact-me'>
 					<h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
 					<form onSubmit={handleFormContactSubmitEvent} className='flex flex-col text-white gap-8  bg-neutral-700 rounded p-4 sm:p-8'>
 						<div className='flex flex-col gap-2 focus-within:text-cyan-400'>
