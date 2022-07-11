@@ -83,10 +83,10 @@ function App() {
 			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
-				{ icon: <DiNodejsSmall size={20} className='text-green-500 min-w-[18px]' />, tag: 'NodeJS' },
+				{ icon: <DiJava size={20} className='text-red-400' />, tag: 'Java' },
+				{ icon: <img src="images/spring.svg" width={'60px'} height={'60px'} alt="logo of spring framework" />, tag: '' },
 				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' },
-				{ icon: <DiJava size={20} className='text-red-400' />, tag: 'Java' }
+				{ icon: <img src="images/hibernate.svg" width={'30px'} height={'30px'} alt="logo of orm hibernate" />, tag: 'Hibernate' },
 			]
 		},
 		{
