@@ -23,7 +23,7 @@ const ProjectType = {
 };
 
 
-const CV_NAME = 'CV_Houssam_El_atmani_Developpeur_FrontEnd_React_Rabat.pdf';
+const CV_NAME = 'CV_Houssam_EL_ATMANI_Developpeur_FullStack_Java_React_Rabat.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
