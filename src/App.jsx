@@ -23,7 +23,7 @@ const ProjectType = {
 };
 
 
-const CV_NAME = 'CV_Houssam_EL_ATMANI_Developpeur_FullStack_Java_React_Rabat.pdf';
+const CV_NAME = 'CV_Houssam_EL_ATMANI_Developpeur_Front-end_Rabat.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
@@ -83,10 +83,14 @@ function App() {
 			description: 'I like to code things from scratch, and enjoy bringing ideas in the browser',
 			languagesTitle: 'Languages',
 			languages: [
-				{ icon: <DiJava size={20} className='text-red-400' />, tag: 'Java' },
-				{ icon: <img src="images/spring.svg" width={'60px'} height={'60px'} alt="logo of spring framework" />, tag: '' },
-				{ icon: <img src="images/kotlin-logo.svg" width={'18px'} height={'18px'} alt="logo of kotlin language" />, tag: 'Kotlin' },
-				{ icon: <img src="images/hibernate.svg" width={'30px'} height={'30px'} alt="logo of orm hibernate" />, tag: 'Hibernate' },
+
+				{ icon: <DiJsBadge size={20} className='text-yellow-500  min-w-[18px]' />, tag: 'Javascript' },
+				{
+					icon: <img src="images/typescript-logo.svg" width={'18px'} height={'18px'} alt="logo of language typescript" />,
+					tag: 'Typescript'
+				},
+				{ icon: <img src="images/nodejs.svg" width={'60px'} height={'60px'} alt="logo of spring framework" />, tag: '' },
+				{ icon: <img src="images/prisma.svg" width={'30px'} height={'30px'} alt="logo of orm prisma" />, tag: 'Prisma' },
 			]
 		},
 		{
@@ -107,24 +111,16 @@ function App() {
 			description: 'Tools for a better productivity',
 			languagesTitle: 'Tools',
 			languages: [
+				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
+				{ icon: <img src="images/vitejs.svg" className='max-w-[20px]' />, tag: 'Vite' },
+				{ icon: <DiNpm className=' text-pink-700 min-w-[18px]' />, tag: 'Npm' },
+				{ icon: <DiIntellij className=' text-purple-800 min-w-[18px]' />, tag: 'IntelliJ' },
+				{ icon: <DiGit className=' text-orange-700 min-w-[20px]' />, tag: 'Git' },
+				{ icon: <FaGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
 				{ icon: <DiDebian className=' text-[#d0074e] min-w-[18px]' />, tag: 'Linux' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
-				{ icon: <DiLinux className=' text-neutral-900 min-w-[18px]' />, tag: 'Bash' },
-				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
-				{ icon: <DiIntellij className=' text-purple-800 min-w-[18px]' />, tag: 'IntelliJ' },
-				{ icon: <DiNpm className=' text-pink-700 min-w-[18px]' />, tag: 'Npm' },
-
-				{
-					icon: <img src="images/gradle-logo.svg" width={'18px'} height={'18px'} alt="logo of gradle build tool" />,
-					tag: 'Gradle'
-				},
-				{
-					icon: <img src="images/maven.svg" width={'18px'} height={'18px'} alt="logo of maven build tool" />,
-					tag: 'Maven'
-				},
-				{ icon: <DiGit className=' text-orange-700 min-w-[20px]' />, tag: 'Git' },
-				{ icon: <FaGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' }
+				{ icon: <DiLinux className=' text-neutral-900 min-w-[18px]' />, tag: 'Bash' }
 			]
 		}
 	]);
@@ -141,21 +137,21 @@ function App() {
 		const all = [
 			{
 				type: 'React',
-				tags: ['React', 'React-Icons', 'Java', 'Spring'],
+				tags: ['React', 'React-Icons', 'NodeJS', 'Express'],
 				image: 'images/challenges/image-uploader.png',
 				title: 'Image Uploader Challenge',
 				description: 'Choose and upload image to remote server',
 				demoLink: 'https://image-uploader-he.netlify.app/',
-				codeLink: 'https://github.com/houssam-developer/image-uploader-backend-java'
+				codeLink: 'https://github.com/houssam-developer/my-unsplash-backend'
 			},
 			{
 				type: 'React',
-				tags: ['React', 'React-Icons', 'Java', 'Spring'],
+				tags: ['React', 'React-Icons', 'NodeJS', 'Express'],
 				image: 'images/challenges/my-unsplash.png',
 				title: 'My Unsplash',
 				description: 'Manage multiples images to remote server',
 				demoLink: 'https://my-unsplash-he.netlify.app/',
-				codeLink: 'https://github.com/houssam-developer/myunsplash-backend-java'
+				codeLink: 'https://github.com/houssam-developer/myunsplash-backend'
 			},
 			{
 				type: 'React',
@@ -355,7 +351,7 @@ function App() {
 			<section id='sectionHero' className='flex flex-col justify-center items-center gap-12 section-hero h-[91vh] text-white'>
 				<div className='flex flex-col items-center gap-8 p-4 sm:p-8'>
 					<h2 className='font-sans font-semibold text-xl sm:text-xl pb-2 w-full'>
-						<span className='font-sans font-semibold text-xl sm:text-xl my-title'>Full</span> Stack Developer
+						<span className='font-sans font-semibold text-xl sm:text-xl my-title'>Front-End</span> Developer
 					</h2>
 					<p className='font-sans font-normal sm:text-xl max-w-lg'>Self-motivated developer, who is willing to create outstanding UI applications. </p>
 				</div>
@@ -383,15 +379,15 @@ function App() {
 							<div className='min-w-[190px]'>
 								<div className='container-ratio-2-22'>
 									<img className='rounded-md child-ratio brightness-75 object-top scale-[.70] md:scale-[.85]'
-										src="images/my-photo-he.jpg" alt="picture of developer"
+										src="images/my_photo_he.jpg" alt="picture of developer"
 									/>
 								</div>
 							</div>
 							<div className='flex flex-col justify-center gap-1 max-w-xl w-full'>
 								<h2 className='font-sans text-xl font-semibold self-center'>Houssam EL ATMANI</h2>
-								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>Full Stack Developer</h3>
+								<h3 className='font-sans text-cyan-400 font-medium text-sm self-center'>Front-End Developer</h3>
 								<p className='p-6 text-md font-sans font-normal text-primary text-center'>
-									Hi, my name is Houssam. I am a Full Stack developer.<br />
+									Hi, my name is Houssam. I am a Front-End developer.<br />
 									I got multiple skills and I am a self taught developer. <br />
 									I can help you build your web application.<br />
 								</p>
@@ -426,7 +422,7 @@ function App() {
 					<h2 className='text-2xl font-sans font-semibold mb-4'>Projects</h2>
 					<div className='flex gap-4 items-center py-4'>
 						<button ref={btnProjectsAll} className='btn-shadow' onClick={handleBtnAllEvent}>All</button>
-						<button ref={btnProjectsReact} className='btn-shadow  btn-shadow--active' onClick={handleBtnReactEvent}>React - Spring</button>
+						<button ref={btnProjectsReact} className='btn-shadow  btn-shadow--active' onClick={handleBtnReactEvent}>React - NodeJS</button>
 						<button ref={btnProjectsVanilla} className='btn-shadow' onClick={handleBtnVanillaHTMLEvent}>Vanilla Web</button>
 					</div>
 
