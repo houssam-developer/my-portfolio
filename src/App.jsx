@@ -23,7 +23,7 @@ const ProjectType = {
 };
 
 
-const CV_NAME = 'CV_Houssam_EL_ATMANI_Developpeur_FullStack_Java_React_Rabat.pdf';
+const CV_NAME = 'CV_Houssam_EL_ATMANI_Developpeur_Front_End_Rabat.pdf';
 
 function App() {
 	const [typeProject, setTypeProject] = useState('');
@@ -107,6 +107,11 @@ function App() {
 			description: 'Tools for a better productivity',
 			languagesTitle: 'Tools',
 			languages: [
+				{ icon: <DiVisualstudio className=' text-blue-700 min-w-[18px]' />, tag: 'VSCode' },
+				{ icon: <img src="images/vitejs.svg" className='max-w-[20px]' />, tag: 'Vite' },
+				{ icon: <DiNpm className=' text-pink-700 min-w-[18px]' />, tag: 'Npm' },
+				{ icon: <DiGit className=' text-orange-700 min-w-[20px]' />, tag: 'Git' },
+				{ icon: <FaGithub className=' text-purple-200 min-w-[20px]' />, tag: 'Github' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Windows' },
 				{ icon: <DiDebian className=' text-[#d0074e] min-w-[18px]' />, tag: 'Linux' },
 				{ icon: <DiWindows className=' text-blue-500 min-w-[18px]' />, tag: 'Powershell' },
