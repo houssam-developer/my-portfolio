@@ -40,7 +40,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    color: #fff;
+    color: rgb(24, 24, 24);
     outline: none;
 }
 
@@ -152,9 +152,4 @@ textarea:focus {
         width: 100%;
         @apply border-b-4 border-x-0 rounded-xl border-cyan-400;
     }
-}
-
-.bg-nav {
-    /* background-color: rgba(51, 170, 51, .4); */
-    background-color: rgba(23, 23, 23, .7);
 }

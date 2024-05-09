@@ -332,7 +332,7 @@ function App() {
                 <section id='sectionAboutMe' className='p-4 text-primary max-w-[1024px] mx-auto '>
                     <h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
                     <div className='flex flex-wrap gap-4'>
-                        <div className='p-4 w-full shadow border rounded-md border-gray-300 bg-white flex flex-col md:flex-row justify-center items-center gap-4 '>
+                        <div className='p-4 w-full shadow border rounded-md border-gray-300 bg-gray-50 flex flex-col md:flex-row justify-center items-center gap-4 '>
                             <div className='min-w-[190px]'>
                                 <div className='container-ratio-2-22'>
                                     <img className='rounded-md child-ratio brightness-90 object-top scale-[.70] md:scale-[.85]'
@@ -386,8 +386,8 @@ function App() {
                         {
                             projects.map(it =>
                                 <li key={uuidv4()}
-                                    className='max-w-[300px] shadow rounded p-6  flex flex-col justify-between gap-2 border
- 										border-gray-200  hover:border-cyan-400 transition-[border]'>
+                                    className='max-w-[300px]  p-6  flex flex-col justify-between gap-2 border
+ 										border-gray-200  bg-gray-50 rounded-md shadow hover:border-cyan-400 transition-[border]'>
                                     <div>
                                         <div className='container-ratio-4-3 z-0'>
                                             <img className='child-ratio rounded '
@@ -420,32 +420,32 @@ function App() {
 
                 <section id='sectionContactMe' className='contact-me'>
                     <h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
-                    <form onSubmit={handleFormContactSubmitEvent} className='flex flex-col  gap-8   rounded p-4 sm:p-8'>
-                        <div className='flex flex-col gap-2 focus-within:text-cyan-400'>
+                    <form onSubmit={handleFormContactSubmitEvent} className='flex flex-col  gap-8  bg-gray-50 rounded-md shadow p-4 sm:p-8'>
+                        <div className='flex flex-col gap-2 '>
                             <label htmlFor="tagName">Your Name</label>
                             <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
                                 <MdPerson size={20} className='min-w-max' />
                                 <input type="text" id='tagName' name='name' />
                             </div>
                         </div>
-                        <div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+                        <div className='flex flex-col gap-1 '>
                             <label htmlFor="tagEmail">Your Email</label>
                             <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
                                 <MdEmail size={20} className='min-w-max' />
                                 <input type="email" id='tagEmail' name='email' required />
                             </div>
                         </div>
-                        <div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+                        <div className='flex flex-col gap-1 '>
                             <label htmlFor="tagSubject">Subject</label>
                             <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
                                 <MdSubject size={20} className='min-w-max' />
                                 <input type="text" id='tagSubject' name='subject' />
                             </div>
                         </div>
-                        <div className='flex flex-col gap-1 focus-within:text-cyan-400'>
+                        <div className='flex flex-col gap-1 '>
                             <label htmlFor="tagMessage">Your Message</label>
                             <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-                                <textarea id='tagMessage' rows={'5'} name='message' />
+                                <textarea id='tagMessage' rows={5} name='message' />
                             </div>
                         </div>
                         <div className='flex gap-8 justify-between'>
@@ -462,27 +462,26 @@ function App() {
                 </section>
             </main>
 
-            <footer className=' bg-[#111] py-8'>
+            <footer className=' bg-[#111] py-8 text-gray-200'>
                 <div className='flex flex-col md:flex-row md:justify-between gap-4 items-center p-4 max-w-[1024px] mx-auto min-h-[40vh] '>
 
-                    <nav className='hidden md:flex text-sm md:flex-col md:text-md right-0 text-primary font-sans font-medium gap-6 px-4'>
+                    <nav className='hidden md:flex text-sm md:flex-col md:text-md right-0  font-sans font-medium gap-6 px-4'>
                         <a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:border-cyan-400' href="#headerApp">Home</a>
                         <a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:border-cyan-400' href="#sectionAboutMe">About me</a>
                         <a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:border-cyan-400' href="#sectionProjects">Projects</a>
                         <a className='transition-[border] max-w-max pb-1 border-b-2 border-transparent hover:border-cyan-400' href="#sectionContactMe">Contact me</a>
                     </nav>
 
-                    <div className='flex flex-col gap-2 text-primary'>
+                    <div className='flex flex-col gap-2 '>
                         <div className='flex items-center gap-4 p-4'>
                             <a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://github.com/houssam-developer"><FaGithub size={30} /></a>
-                            <a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://www.linkedin.com/in/houssam-elatmani-651308219"><FaLinkedin size={30} /></a>
                             <a className='transition-[padding] md:hover:pb-2' target="_blank" href="https://devchallenges.io/portfolio/houssam-developer">
                                 <img src="images/devchallenges.png" alt="logo of devchallenges" width={'30px'} height={'30px'} />
                             </a>
                         </div>
                     </div>
 
-                    <p className="text-primary text-center p-4 font-medium">created by <span className='font-medium text-cyan-200'>houssam-developer</span> - devChallenges.io</p>
+                    <p className="text-center p-4 font-medium">created by <span className='font-medium text-cyan-200'>houssam-developer</span> - devChallenges.io</p>
 
                 </div>
             </footer>
@@ -491,7 +490,7 @@ function App() {
 
     function BottomNav() {
         return (
-            <nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-50 py-2 m-1 rounded-xl  bg-nav'>
+            <nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-50 py-2 m-1 rounded-xl border border-cyan-300 bg-gray-50 opacity-80'>
                 <a href='#headerApp' className='flex flex-col items-center gap-1 text-xs font-sans font-medium  hover:text-cyan-400' >
                     <div className='rounded-full  p-2 '>
                         <MdHome size={24} />
