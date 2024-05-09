@@ -1,199 +1,197 @@
 .container-layout-shifter {
-	padding: 1em;
+    padding: 1em;
 
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 
 
-	&> :first-child {
-		flex: 1 1 300px;
-		min-width: 250px;
+    &> :first-child {
+        flex: 1 1 300px;
+        min-width: 250px;
 
-		@media screen and (min-width: 650px) {
-			max-width: 350px;
-		}
-	}
+        @media screen and (min-width: 650px) {
+            max-width: 350px;
+        }
+    }
 
-	&> :nth-child(2) {
-		flex: 1 1 300px;
-	}
+    &> :nth-child(2) {
+        flex: 1 1 300px;
+    }
 }
 
 .container-layout-shifter-one {
 
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 
 
-	&> :first-child {
-		flex: 1 1 300px;
-		max-width: 350px;
-		min-width: 250px;
-	}
+    &> :first-child {
+        flex: 1 1 300px;
+        max-width: 350px;
+        min-width: 250px;
+    }
 
-	&> :nth-child(2) {
-		flex: 1 1 300px;
-	}
+    &> :nth-child(2) {
+        flex: 1 1 300px;
+    }
 }
 
 .container-layout-grid-four {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
 }
 
 .container-layout-grid-four-projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
 
-	@media screen and (min-width: 400px) {
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	}
+    @media screen and (min-width: 400px) {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
 
 .container-layout-grid-skills {
 
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
 
-	@media screen and (min-width: 400px) {
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	}
+    @media screen and (min-width: 400px) {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
 
 .container-layout-grid-skills-small {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-	gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1em;
 }
 
 
 .container-box {
-	@apply shadow rounded p-4 bg-neutral-800 text-primary;
+    @apply shadow rounded p-4 bg-gray-50 text-primary;
 }
 
 .container-layout-small-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1em;
 }
 
 .btn-shadow {
-	@apply px-4 py-2 border-[1px] rounded font-sans font-semibold text-sm text-white bg-transparent border-neutral-500 transition-shadow;
+    @apply px-4 py-2 border-[1px] rounded font-sans font-semibold text-sm bg-transparent border-neutral-500 transition-shadow;
 
-	cursor: pointer;
+    cursor: pointer;
 
-	@media screen and (max-width: 350px) {
-		font-size: .7rem;
-	}
+    @media screen and (max-width: 350px) {
+        font-size: .7rem;
+    }
 
 
 
-	&:hover {
-		@apply border-cyan-600 shadow-[0_0_10px_#22d3ee];
-	}
+    &:hover {
+        @apply border-cyan-600 shadow-[0_0_10px_#22d3ee];
+    }
 
-	&--active {
-		@apply bg-cyan-600 border-cyan-600 shadow-[0_0_10px_#22d3ee];
-	}
 
-	&--email {
-		@apply bg-cyan-600 border-cyan-600;
-	}
+
+    &--email {
+        @apply bg-cyan-600 border-cyan-600;
+    }
 }
 
 .btn-top {
-	@apply rounded-full p-3 bg-neutral-800 text-white border-[1px] border-cyan-400;
+    @apply rounded-full p-3 bg-neutral-800 text-white border-[1px] border-cyan-400;
 
-	z-index: 100;
+    z-index: 100;
 
-	&:hover {
-		@apply shadow-[0_0_10px_#22d3ee] border-cyan-600 text-cyan-500;
-	}
+    &:hover {
+        @apply shadow-[0_0_10px_#22d3ee] border-cyan-600 text-cyan-500;
+    }
 }
 
 /* ===== ALERT NOTIFICATION ===== */
 .alert {
-	@apply bg-neutral-900 border-l-4 border-green-500 rounded text-primary p-4;
-	position: fixed;
-	top: 10px;
-	right: 0;
-	z-index: 120;
-	opacity: 0;
+    @apply bg-neutral-900 border-l-4 border-green-500 rounded text-primary p-4;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    z-index: 120;
+    opacity: 0;
 
-	pointer-events: none;
+    pointer-events: none;
 
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 
-	@media screen and (min-width: 768px) {
-		@apply py-6;
-	}
+    @media screen and (min-width: 768px) {
+        @apply py-6;
+    }
 
-	&__message {
-		flex-grow: 1;
-		padding: 0 1rem;
-	}
+    &__message {
+        flex-grow: 1;
+        padding: 0 1rem;
+    }
 
 }
 
 .alert.show-alert {
-	opacity: 1;
-	pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .alert.show {
-	animation: show_slide 1s ease forwards;
+    animation: show_slide 1s ease forwards;
 }
 
 @keyframes show_slide {
-	0% {
-		transform: translateX(100%);
-	}
+    0% {
+        transform: translateX(100%);
+    }
 
-	40% {
-		transform: translateX(-10%);
-	}
+    40% {
+        transform: translateX(-10%);
+    }
 
-	80% {
-		transform: translateX(0%);
-	}
+    80% {
+        transform: translateX(0%);
+    }
 
-	100% {
-		transform: translateX(-10px);
-	}
+    100% {
+        transform: translateX(-10px);
+    }
 }
 
 .alert.hide {
-	animation: hide_slide 1s ease forwards;
+    animation: hide_slide 1s ease forwards;
 }
 
 @keyframes hide_slide {
-	0% {
-		transform: translateX(-10px);
-	}
+    0% {
+        transform: translateX(-10px);
+    }
 
-	40% {
-		transform: translateX(0%);
-	}
+    40% {
+        transform: translateX(0%);
+    }
 
-	80% {
-		transform: translateX(-10%);
-	}
+    80% {
+        transform: translateX(-10%);
+    }
 
-	100% {
-		transform: translateX(100%);
-	}
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .contact-me {
-	@apply p-4 text-primary mx-auto;
-	width: 95vw;
-	max-width: 500px;
+    @apply p-4 text-primary mx-auto;
+    width: 95vw;
+    max-width: 500px;
 }

@@ -6,155 +6,155 @@
 
 
 :root {
-	--primary: #e7eaf6;
+    --primary: #242730;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
 body {
-	@apply bg-neutral-800;
+    background-color: #f2f2f2;
 }
 
 input,
 textarea {
-	background-color: transparent;
-	border: none;
-	outline: none;
-	overflow-x: hidden;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    overflow-x: hidden;
 }
 
 textarea {
-	resize: none;
+    resize: none;
 }
 
 input:focus,
 textarea:focus {
-	color: #fff;
-	outline: none;
+    color: #fff;
+    outline: none;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 .container-hobbies {
-	border: 2px solid orange;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 2em;
+    border: 2px solid orange;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
 }
 
 .container-ratio-1-1 {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
 }
 
 
 .container-ratio-2-3 {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 150%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%;
 }
 
 .container-ratio-2-22 {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 130%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 130%;
 }
 
 
 
 .container-ratio-2-3 {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 200%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 200%;
 }
 
 .container-ratio-4-3 {
-	position: relative;
+    position: relative;
 
-	overflow-y: hidden;
+    overflow-y: hidden;
 
-	width: 100%;
-	height: 0;
-	padding-bottom: 75%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
 }
 
 .container-ratio-16-9 {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 }
 
 .child-ratio {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-	z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 20;
 }
 
 .primary-bg {
-	background-color: #e7eaf6;
+    background-color: #e7eaf6;
 }
 
 .primary-bg-dark {
-	background-color: #113f67;
+    background-color: #113f67;
 }
 
 .primary-text-light {
-	color: #a2a8d3;
+    color: #a2a8d3;
 }
 
 .primary-text {
-	color: #38598b;
+    color: #38598b;
 }
 
 .primary-text-dark {
-	color: #113f67;
+    color: #113f67;
 }
 
 .section-hero {
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/section-hero.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/section-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .my-title {
-	position: relative;
-	padding-bottom: .5em;
+    position: relative;
+    padding-bottom: .5em;
 
-	&::after {
-		position: absolute;
-		content: '';
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		@apply border-b-4 border-x-0 rounded-xl border-cyan-400;
-	}
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @apply border-b-4 border-x-0 rounded-xl border-cyan-400;
+    }
 }
 
 .bg-nav {
-	/* background-color: rgba(51, 170, 51, .4); */
-	background-color: rgba(23, 23, 23, .7);
+    /* background-color: rgba(51, 170, 51, .4); */
+    background-color: rgba(23, 23, 23, .7);
 }
