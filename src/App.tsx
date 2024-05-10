@@ -276,7 +276,9 @@ function App() {
     }
 
     return (
-        <div className="h-screen mx-auto  text-gray-800">
+        <div className="h-screen mx-auto   text-gray-800">
+
+            {/* ALERT NOTIFICATION */}
             <div ref={containerAlertRef} className="alert hidden hide">
                 <MdOutlineCheckCircle size={24} />
                 <span className="alert__message">Your message has been sent!</span>
@@ -284,6 +286,8 @@ function App() {
                     <MdClose size={24} />
                 </button>
             </div>
+
+            {/* BUTTON TOP  */}
             <div className='hidden md:block relative'>
                 <a href='#headerApp' className='absolute bottom-4 right-4 p-4  hover:text-cyan-400' >
                     <div className='fixed bottom-4 right-4 btn-top'>
@@ -291,6 +295,8 @@ function App() {
                     </div>
                 </a>
             </div>
+
+            {/* HEADER */}
             <header id='headerApp' className='flex items-center justify-between gap-4 min-h-[9vh] '>
                 <a className='p-4 flex items-center gap-4 text-primary ' href="/">
                     <MdViewInAr size={25} />
@@ -328,11 +334,12 @@ function App() {
                 </div>
 
             </section>
-            <main className='max-w-[1440px] mx-auto flex flex-col gap-12 py-12'>
-                <section id='sectionAboutMe' className='p-4 text-primary max-w-[1024px] mx-auto '>
+            <main className='max-w-[1440px] mx-auto flex flex-col gap-12'>
+                <section id='sectionAboutMe' className='p-4 text-primary max-w-5xl mx-auto'>
+
                     <h2 className='text-2xl font-sans font-semibold mb-4'>About Me</h2>
                     <div className='flex flex-wrap gap-4'>
-                        <div className='p-4 w-full shadow border rounded-md border-gray-300 bg-gray-50 flex flex-col md:flex-row justify-center items-center gap-4 '>
+                        <div className='p-4 w-full shadow border rounded-md border-gray-300 bg-white flex flex-col md:flex-row items-center gap-4 '>
                             <div className='min-w-[190px]'>
                                 <div className='container-ratio-2-22'>
                                     <img className='rounded-md child-ratio brightness-90 object-top scale-[.70] md:scale-[.85]'
@@ -353,26 +360,87 @@ function App() {
 
                             </div>
                         </div>
-                        {/* ul is tracked as grid in layout-shifter */}
-                        <ul className='container-layout-grid-skills'>
-                            {skills.map(it =>
-                                <li key={uuidv4()} className='container-box flex flex-col items-center gap-8 pt-8 shadow  '>
-                                    <div className='flex flex-col items-center gap-4'>
-                                        {it.typeIcon}
-                                        <h2 className='font-sans text-xl font-semibold text-cyan-400 '>{it.type}</h2>
-                                    </div>
 
-                                    <ul className='w-full flex flex-wrap justify-center gap-4'>
-                                        {it.languages.map(itArg =>
-                                            <li key={uuidv4()}
-                                                className='flex items-center gap-2 text-[12px] font-sans font-medium px-3 py-2 shadow  rounded sm:text-sm'>{itArg.icon} <span>{itArg.tag}</span></li>)
-                                        }
-                                    </ul>
+                    </div>        </section>
+                <section className="p-2 min-h-[20rem] w-full bg-gray-200 flex items-center">
 
-                                </li>
-                            )
-                            }
-                        </ul>
+                    <div className="flex flex-wrap justify-center gap-2 max-w-6xl m-auto">
+                        <div className="tooltip tooltip-bottom" data-tip="Next.js">
+                            <img
+                                src="/logos/nextjs.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="nextjs logo"
+                            />
+                        </div>
+
+                        <div className="tooltip tooltip-bottom" data-tip="React">
+                            <img
+                                src="/logos/react.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="react logo"
+                            />
+                        </div>
+
+                        <div className="tooltip tooltip-bottom" data-tip="TypeScript">
+                            <img
+                                src="/logos/typescript.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="typescript logo"
+                            />
+                        </div>
+
+                        <div className="tooltip tooltip-bottom" data-tip="JavaScript">
+                            <img
+                                src="/logos/javascript.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="javascript logo"
+                            />
+                        </div>
+
+
+
+                        {/* <div className="tooltip tooltip-bottom" data-tip="Angular">
+                            <img
+                                src="/logos/angular.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="angular logo"
+                            />
+                        </div> */}
+
+
+
+
+                        <div className="tooltip tooltip-bottom" data-tip="Tailwind CSS">
+                            <img
+                                src="/logos/tailwind.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="tailwind logo"
+                            />
+                        </div>
+
+                        <div className="tooltip tooltip-bottom" data-tip="HTML">
+                            <img
+                                src="/logos/html.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="html logo"
+                            />
+                        </div>
+
+                        <div className="tooltip tooltip-bottom" data-tip="CSS">
+                            <img
+                                src="/logos/css.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="css logo"
+                            />
+                        </div>
+                        <div className="tooltip tooltip-bottom" data-tip="MySQL">
+                            <img
+                                src="/logos/mysql.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="mysql logo"
+                            />
+                        </div>
+
                     </div>
                 </section>
                 <section id='sectionProjects' className='p-4 text-primary max-w-[1024px] mx-auto'>
@@ -387,7 +455,7 @@ function App() {
                             projects.map(it =>
                                 <li key={uuidv4()}
                                     className='max-w-[300px]  p-6  flex flex-col justify-between gap-2 border
- 										border-gray-200  bg-gray-50 rounded-md shadow hover:border-cyan-400 transition-[border]'>
+ 										border-gray-200  bg-white rounded-md shadow hover:border-cyan-400 transition-[border]'>
                                     <div>
                                         <div className='container-ratio-4-3 z-0'>
                                             <img className='child-ratio rounded '
@@ -418,47 +486,49 @@ function App() {
                     </ul>
                 </section>
 
-                <section id='sectionContactMe' className='contact-me'>
-                    <h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
-                    <form onSubmit={handleFormContactSubmitEvent} className='flex flex-col  gap-8  bg-gray-50 rounded-md shadow p-4 sm:p-8'>
-                        <div className='flex flex-col gap-2 '>
-                            <label htmlFor="tagName">Your Name</label>
-                            <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded transit focus-within:border-cyan-300'>
-                                <MdPerson size={20} className='min-w-max' />
-                                <input type="text" id='tagName' name='name' />
+                <section id='sectionContactMe' className='w-full h-full bg-gray-300'>
+                    <div className='p-4 py-8 max-w-lg mx-auto'>
+                        <h2 className='text-2xl font-sans font-semibold mb-8'>Contact Me</h2>
+                        <form onSubmit={handleFormContactSubmitEvent} className='flex flex-col  gap-8  bg-white border border-gray-400 rounded-md shadow p-4 sm:p-8'>
+                            <div className='flex flex-col gap-2 '>
+                                <label htmlFor="tagName">Your Name</label>
+                                <div className='flex items-center gap-2 p-2 border-[1px] border-gray-400 rounded transit focus-within:border-cyan-300'>
+                                    <MdPerson size={20} className='min-w-max' />
+                                    <input type="text" id='tagName' name='name' />
+                                </div>
                             </div>
-                        </div>
-                        <div className='flex flex-col gap-1 '>
-                            <label htmlFor="tagEmail">Your Email</label>
-                            <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-                                <MdEmail size={20} className='min-w-max' />
-                                <input type="email" id='tagEmail' name='email' required />
+                            <div className='flex flex-col gap-1 '>
+                                <label htmlFor="tagEmail">Your Email</label>
+                                <div className='flex items-center gap-2 p-2 border-[1px] border-gray-300 rounded focus-within:border-cyan-300'>
+                                    <MdEmail size={20} className='min-w-max' />
+                                    <input type="email" id='tagEmail' name='email' required />
+                                </div>
                             </div>
-                        </div>
-                        <div className='flex flex-col gap-1 '>
-                            <label htmlFor="tagSubject">Subject</label>
-                            <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-                                <MdSubject size={20} className='min-w-max' />
-                                <input type="text" id='tagSubject' name='subject' />
+                            <div className='flex flex-col gap-1 '>
+                                <label htmlFor="tagSubject">Subject</label>
+                                <div className='flex items-center gap-2 p-2 border-[1px] border-gray-300 rounded focus-within:border-cyan-300'>
+                                    <MdSubject size={20} className='min-w-max' />
+                                    <input type="text" id='tagSubject' name='subject' />
+                                </div>
                             </div>
-                        </div>
-                        <div className='flex flex-col gap-1 '>
-                            <label htmlFor="tagMessage">Your Message</label>
-                            <div className='flex items-center gap-2 p-2 border-[1px] border-neutral-300 rounded focus-within:border-cyan-300'>
-                                <textarea id='tagMessage' rows={5} name='message' />
+                            <div className='flex flex-col gap-1 '>
+                                <label htmlFor="tagMessage">Your Message</label>
+                                <div className='flex items-center gap-2 p-2 border-[1px] border-gray-300 rounded focus-within:border-cyan-300'>
+                                    <textarea id='tagMessage' rows={3} name='message' />
+                                </div>
                             </div>
-                        </div>
-                        <div className='flex gap-8 justify-between'>
-                            <button type='reset' className='btn-shadow   self-center flex items-center gap-3'>
-                                <MdClear size={20} />
-                                <span>Clear</span>
-                            </button>
-                            <button type='submit' className='btn-shadow btn-shadow--email  bg-cyan-500 self-center flex items-center gap-3'>
-                                <MdSend size={20} />
-                                <span>Send</span>
-                            </button>
-                        </div>
-                    </form>
+                            <div className='flex gap-8 justify-between'>
+                                <button type='reset' className='btn-shadow   self-center flex items-center gap-3'>
+                                    <MdClear size={20} />
+                                    <span>Clear</span>
+                                </button>
+                                <button type='submit' className='btn-shadow btn-shadow--email  bg-cyan-600 text-gray-50 self-center flex items-center gap-3'>
+                                    <MdSend size={20} />
+                                    <span>Send</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </main>
 
@@ -485,12 +555,12 @@ function App() {
 
                 </div>
             </footer>
-        </div>
+        </div >
     )
 
     function BottomNav() {
         return (
-            <nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-50 py-2 m-1 rounded-xl border border-cyan-300 bg-gray-50 opacity-80'>
+            <nav className='md:hidden flex justify-evenly fixed bottom-1 left-1 right-1 z-50 py-2 m-1 rounded-xl border border-cyan-300 bg-white opacity-80'>
                 <a href='#headerApp' className='flex flex-col items-center gap-1 text-xs font-sans font-medium  hover:text-cyan-400' >
                     <div className='rounded-full  p-2 '>
                         <MdHome size={24} />
