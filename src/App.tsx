@@ -28,7 +28,7 @@ type ProjectDescription = {
     demoLink: string,
     codeLink: string,
 };
-const CV_NAME = 'CV_ELATMANI_HOUSSAM_DEVELOPPEUR_FULLSTACK_JAVASCRIPT.pdf';
+const CV_NAME = 'CV_ELATMANI_HOUSSAM_DEVELOPPEUR_WEB_FULLSTACK_94.pdf';
 const all: ProjectDescription[] = [
     {
         type: 'react',
@@ -365,11 +365,18 @@ function App() {
                 <section className="p-2 min-h-[20rem] w-full bg-gray-200 flex items-center">
 
                     <div className="flex flex-wrap justify-center gap-2 max-w-6xl m-auto">
-                        <div className="tooltip tooltip-bottom" data-tip="Next.js">
+                        <div className="tooltip tooltip-bottom" data-tip="Java">
                             <img
-                                src="/logos/nextjs.png"
+                                src="/logos/java.png"
                                 className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
-                                alt="nextjs logo"
+                                alt="java logo"
+                            />
+                        </div>
+                        <div className="tooltip tooltip-bottom" data-tip="Spring">
+                            <img
+                                src="/logos/spring.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="spring logo"
                             />
                         </div>
 
@@ -378,6 +385,20 @@ function App() {
                                 src="/logos/react.png"
                                 className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
                                 alt="react logo"
+                            />
+                        </div>
+                        <div className="tooltip tooltip-bottom" data-tip="Angular">
+                            <img
+                                src="/logos/angular.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="angular logo"
+                            />
+                        </div>
+                        <div className="tooltip tooltip-bottom" data-tip="Next.js">
+                            <img
+                                src="/logos/nextjs.png"
+                                className="h-[70px] sm:h-[100px] rounded-md shadow-sm"
+                                alt="nextjs logo"
                             />
                         </div>
 
